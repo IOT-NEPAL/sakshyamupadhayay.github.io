@@ -555,11 +555,6 @@ ${Object.entries(ugssData.faculty).map(([name, info]) =>
     `- ${name}: ${info.post} (${info.department}) - ${info.compliment}`
 ).join('\n')}
 
-STUDENT DIRECTORY:
-${Object.entries(ugssData.students).map(([name, info]) => 
-    `- ${name}: Grade ${info.grade}, ${info.stream} (${info.faculty}) - ${info.compliment}`
-).join('\n')}
-
 DEPARTMENT HEADS (HODs):
 - Physics Department HOD: Devendra Khadka
 - Chemistry Department HOD: Jaya Ram Ghimire  
