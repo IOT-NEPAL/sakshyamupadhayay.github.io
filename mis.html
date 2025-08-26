@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniglobe SS/College - MIS Login</title>
+    <link rel="stylesheet" href="mis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background-animation">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="login-container">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/OIP.webp" alt="Uniglobe Logo" id="logo-img">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Uniglobe</h1>
+                        <h2>SS/College</h2>
+                        <p>Bringing the best together</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="login-panels">
+                <div class="panel admin-panel" onclick="navigateToLogin('admin')">
+                    <div class="panel-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Admin Panel</h3>
+                    </div>
+                    <div class="panel-content">
+                        <p>System Administration</p>
+                        <div class="click-indicator">
+                            <span>Click to Login</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="panel teacher-panel" onclick="navigateToLogin('teacher')">
+                    <div class="panel-header">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Teacher Panel</h3>
+                    </div>
+                    <div class="panel-content">
+                        <p>Faculty Access</p>
+                        <div class="click-indicator">
+                            <span>Click to Login</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="panel parent-panel" onclick="navigateToLogin('parent')">
+                    <div class="panel-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Parent Panel</h3>
+                    </div>
+                    <div class="panel-content">
+                        <p>Parent Portal</p>
+                        <div class="click-indicator">
+                            <span>Click to Login</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="panel student-panel" onclick="navigateToLogin('student')">
+                    <div class="panel-header">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Student Panel</h3>
+                    </div>
+                    <div class="panel-content">
+                        <p>Student Portal</p>
+                        <div class="click-indicator">
+                            <span>Click to Login</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>&copy; 2024 Uniglobe SS/College. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="homepage.js"></script>
+    <script src="chatbot-loader.js"></script>
+    <script>
+        function navigateToLogin(userType) {
+            // Get the clicked panel
+            const panel = event.currentTarget;
+            
+            // Show loading state
+            const originalContent = panel.innerHTML;
+            panel.innerHTML = `
+                <div class="panel-header">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <h3>Loading...</h3>
+                </div>
+                <div class="panel-content">
+                    <p>Preparing your portal...</p>
+                    <div class="click-indicator">
+                        <span>Please wait</span>
+                    </div>
+                </div>
+            `;
+            panel.style.pointerEvents = 'none';
+            
+            // Navigate after a short delay
+            setTimeout(() => {
+                window.location.href = `${userType}-login.html`;
+            }, 800);
+        }
+        
+        // Add enhanced hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.panel').forEach(panel => {
+                panel.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.03)';
+                    this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.15)';
+                    
+                    // Add pulse animation to icon
+                    const icon = this.querySelector('.panel-header i');
+                    if (icon) {
+                        icon.style.animation = 'pulse 0.6s ease-in-out';
+                    }
+                });
+                
+                panel.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+                    
+                    // Remove pulse animation
+                    const icon = this.querySelector('.panel-header i');
+                    if (icon) {
+                        icon.style.animation = '';
+                    }
+                });
+
+                // Add click animation
+                panel.addEventListener('click', function() {
+                    this.style.transform = 'translateY(-2px) scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(0) scale(1)';
+                    }, 150);
+                });
+            });
+            
+            // Add CSS animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
+                    100% { transform: scale(1); }
+                }
+                
+                .panel {
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                
+                .panel-header i {
+                    transition: all 0.3s ease;
+                }
+                
+                .fa-spinner {
+                    color: #667eea;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html> 

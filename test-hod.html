@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOD Test - Computer Science</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .test-button:hover {
+            background: #5a6fd8;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Test: Computer Science HOD</h1>
+        <p>Click the button below to test the chatbot's response to "Who is HOD of computer science?"</p>
+        
+        <button class="test-button" onclick="testHOD()">
+            Test: "Who is HOD of computer science?"
+        </button>
+        
+        <div class="result" id="result">
+            <p>Click the button above to test the chatbot...</p>
+        </div>
+    </div>
+    
+    <script>
+        function testHOD() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>Testing... Please check the chatbot response below.</p>';
+            
+            // Simulate clicking the chat bubble
+            const chatBubble = document.getElementById('chat-bubble');
+            if (chatBubble) {
+                chatBubble.click();
+                
+                // Wait a moment for chat to open, then simulate typing
+                setTimeout(() => {
+                    const chatInput = document.getElementById('chat-input');
+                    if (chatInput) {
+                        chatInput.value = 'Who is HOD of computer science?';
+                        chatInput.dispatchEvent(new KeyboardEvent('keypress', { key: 'Enter' }));
+                        resultDiv.innerHTML = '<p>✅ Query sent! Check the chatbot response below.</p>';
+                    }
+                }, 500);
+            } else {
+                resultDiv.innerHTML = '<p>❌ Chatbot not loaded. Please refresh the page.</p>';
+            }
+        }
+    </script>
+    
+    <!-- Load the enhanced chatbot -->
+    <script src="chatbot-loader.js"></script>
+</body>
+</html> 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test New Chatbot - Local Database + Google Search</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+        }
+        .test-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .test-button:hover {
+            background: #5a6fd8;
+        }
+        .test-button.faculty {
+            background: #4CAF50;
+        }
+        .test-button.faculty:hover {
+            background: #45a049;
+        }
+        .test-button.google {
+            background: #ff9800;
+        }
+        .test-button.google:hover {
+            background: #f57c00;
+        }
+        .description {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Test New Chatbot</h1>
+        <p><strong>Local Database + Google Search (No External API)</strong></p>
+        
+        <div class="test-section">
+            <h3>🎓 Faculty Database Tests</h3>
+            <div class="description">
+                These should use the local faculty database with instant responses and compliments.
+            </div>
+            <button class="test-button faculty" onclick="testQuery('Who is HOD of computer science?')">
+                Computer Science HOD
+            </button>
+            <button class="test-button faculty" onclick="testQuery('Show me physics department faculty')">
+                Physics Department
+            </button>
+            <button class="test-button faculty" onclick="testQuery('Who is Devendra Khadka?')">
+                Specific Faculty
+            </button>
+            <button class="test-button faculty" onclick="testQuery('List all faculty members')">
+                Complete List
+            </button>
+        </div>
+        
+        <div class="test-section">
+            <h3>🔍 Google Search Tests</h3>
+            <div class="description">
+                These should provide Google search links (no long paragraphs).
+            </div>
+            <button class="test-button google" onclick="testQuery('What is the weather today?')">
+                Weather Query
+            </button>
+            <button class="test-button google" onclick="testQuery('Latest news about technology')">
+                News Query
+            </button>
+            <button class="test-button google" onclick="testQuery('How to cook pasta?')">
+                General Query
+            </button>
+        </div>
+        
+        <div class="test-section">
+            <h3>📋 Expected Results</h3>
+            <ul>
+                <li><strong>Faculty queries:</strong> Instant responses with faculty info and compliments</li>
+                <li><strong>Non-faculty queries:</strong> Short response with Google search link</li>
+                <li><strong>No long paragraphs:</strong> All responses should be concise</li>
+                <li><strong>No external API:</strong> Everything runs locally or uses Google search</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        function testQuery(query) {
+            // Simulate clicking the chat bubble
+            const chatBubble = document.getElementById('chat-bubble');
+            if (chatBubble) {
+                chatBubble.click();
+                
+                // Wait a moment for chat to open, then simulate typing
+                setTimeout(() => {
+                    const chatInput = document.getElementById('chat-input');
+                    if (chatInput) {
+                        chatInput.value = query;
+                        chatInput.dispatchEvent(new KeyboardEvent('keypress', { key: 'Enter' }));
+                    }
+                }, 500);
+            } else {
+                alert('Chatbot not loaded. Please refresh the page.');
+            }
+        }
+    </script>
+    
+    <!-- Load the enhanced chatbot -->
+    <script src="chatbot-loader.js"></script>
+</body>
+</html> 

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Uniglobe SS/College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/OIP.webp" alt="Student Avatar">
+                <h3>Student Portal</h3>
+                <p>Welcome back!</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link active" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('profile')"><i class="fas fa-user"></i>My Profile</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('academic-progress')"><i class="fas fa-chart-line"></i>Academic Progress</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('attendance')"><i class="fas fa-calendar-check"></i>Attendance</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('assignments')"><i class="fas fa-book"></i>Assignments</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('grades')"><i class="fas fa-star"></i>Grades</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('courses')"><i class="fas fa-graduation-cap"></i>Courses</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="showSection('notices')"><i class="fas fa-bell"></i>Notices</a></li>
+                <li class="nav-item"><a href="student-login.html" class="nav-link"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Section -->
+            <div id="dashboard" class="content-section active">
+                <div class="dashboard-header">
+                    <h1>Student Dashboard</h1>
+                    <p>Welcome to your academic portal. Stay organized and track your progress!</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>88%</h3><p>Overall Grade</p></div>
+                    <div class="stat-card"><h3>85%</h3><p>Attendance</p></div>
+                    <div class="stat-card"><h3>15</h3><p>Assignments Completed</p></div>
+                    <div class="stat-card"><h3>5</h3><p>Active Courses</p></div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Student Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Name:</strong><span>Bikash Thapa</span></div>
+                        <div class="info-item"><strong>Class:</strong><span>Grade 11 - Science</span></div>
+                        <div class="info-item"><strong>Roll Number:</strong><span>2024-001</span></div>
+                        <div class="info-item"><strong>Admission Date:</strong><span>March 2024</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profile" class="content-section">
+                <div class="section-title"><i class="fas fa-user"></i>My Profile</div>
+                
+                <div class="student-info">
+                    <h3>Personal Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Full Name:</strong><span>Bikash Thapa</span></div>
+                        <div class="info-item"><strong>Date of Birth:</strong><span>March 15, 2007</span></div>
+                        <div class="info-item"><strong>Gender:</strong><span>Male</span></div>
+                        <div class="info-item"><strong>Blood Group:</strong><span>O+</span></div>
+                        <div class="info-item"><strong>Address:</strong><span>Baneshwor, Kathmandu</span></div>
+                        <div class="info-item"><strong>Phone:</strong><span>+977-9841234567</span></div>
+                        <div class="info-item"><strong>Email:</strong><span>bikash.thapa@student.uniglobe.edu.np</span></div>
+                        <div class="info-item"><strong>Emergency Contact:</strong><span>Hari Thapa (Father) - +977-9841234568</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Academic Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Student ID:</strong><span>2024-001</span></div>
+                        <div class="info-item"><strong>Class:</strong><span>Grade 11 - Science</span></div>
+                        <div class="info-item"><strong>Section:</strong><span>A</span></div>
+                        <div class="info-item"><strong>Roll Number:</strong><span>15</span></div>
+                        <div class="info-item"><strong>Admission Date:</strong><span>March 1, 2024</span></div>
+                        <div class="info-item"><strong>Academic Year:</strong><span>2024-2025</span></div>
+                        <div class="info-item"><strong>Previous School:</strong><span>Shree Baneshwor Secondary School</span></div>
+                        <div class="info-item"><strong>Scholarship Status:</strong><span>Merit-based (50% fee waiver)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Progress Section -->
+            <div id="academic-progress" class="content-section">
+                <div class="section-title"><i class="fas fa-chart-line"></i>Academic Progress</div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>88%</h3><p>Current GPA</p></div>
+                    <div class="stat-card"><h3>92%</h3><p>Class Rank</p></div>
+                    <div class="stat-card"><h3>15/20</h3><p>Subjects</p></div>
+                    <div class="stat-card"><h3>A+</h3><p>Overall Grade</p></div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Subject-wise Performance</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Physics:</strong><span>92% (A+)</span></div>
+                        <div class="info-item"><strong>Chemistry:</strong><span>88% (A)</span></div>
+                        <div class="info-item"><strong>Biology:</strong><span>85% (A)</span></div>
+                        <div class="info-item"><strong>Mathematics:</strong><span>90% (A+)</span></div>
+                        <div class="info-item"><strong>English:</strong><span>87% (A)</span></div>
+                        <div class="info-item"><strong>Nepali:</strong><span>89% (A)</span></div>
+                        <div class="info-item"><strong>Computer Science:</strong><span>94% (A+)</span></div>
+                        <div class="info-item"><strong>Social Studies:</strong><span>86% (A)</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Progress Timeline</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>First Term:</strong><span>85% (B+)</span></div>
+                        <div class="info-item"><strong>Mid Term:</strong><span>87% (A)</span></div>
+                        <div class="info-item"><strong>Current Term:</strong><span>88% (A)</span></div>
+                        <div class="info-item"><strong>Projected Final:</strong><span>90% (A+)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attendance Section -->
+            <div id="attendance" class="content-section">
+                <div class="section-title"><i class="fas fa-calendar-check"></i>Attendance Record</div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>85%</h3><p>Overall Attendance</p></div>
+                    <div class="stat-card"><h3>120</h3><p>Days Present</p></div>
+                    <div class="stat-card"><h3>21</h3><p>Days Absent</p></div>
+                    <div class="stat-card"><h3>5</h3><p>Late Arrivals</p></div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Monthly Attendance Breakdown</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>March 2024:</strong><span>22/25 days (88%)</span></div>
+                        <div class="info-item"><strong>April 2024:</strong><span>20/22 days (91%)</span></div>
+                        <div class="info-item"><strong>May 2024:</strong><span>18/20 days (90%)</span></div>
+                        <div class="info-item"><strong>June 2024:</strong><span>19/21 days (90%)</span></div>
+                        <div class="info-item"><strong>July 2024:</strong><span>21/23 days (91%)</span></div>
+                        <div class="info-item"><strong>August 2024:</strong><span>20/22 days (91%)</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Subject-wise Attendance</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Physics:</strong><span>88% (44/50 classes)</span></div>
+                        <div class="info-item"><strong>Chemistry:</strong><span>86% (43/50 classes)</span></div>
+                        <div class="info-item"><strong>Biology:</strong><span>84% (42/50 classes)</span></div>
+                        <div class="info-item"><strong>Mathematics:</strong><span>90% (45/50 classes)</span></div>
+                        <div class="info-item"><strong>English:</strong><span>92% (46/50 classes)</span></div>
+                        <div class="info-item"><strong>Nepali:</strong><span>88% (44/50 classes)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignments Section -->
+            <div id="assignments" class="content-section">
+                <div class="section-title"><i class="fas fa-book"></i>Assignments & Projects</div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>15</h3><p>Total Assignments</p></div>
+                    <div class="stat-card"><h3>13</h3><p>Completed</p></div>
+                    <div class="stat-card"><h3>2</h3><p>Pending</p></div>
+                    <div class="stat-card"><h3>87%</h3><p>Average Score</p></div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Recent Assignments</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Physics Lab Report:</strong><span>Submitted - 92% (Due: Dec 10)</span></div>
+                        <div class="info-item"><strong>Chemistry Project:</strong><span>Submitted - 88% (Due: Dec 8)</span></div>
+                        <div class="info-item"><strong>Mathematics Assignment:</strong><span>Submitted - 95% (Due: Dec 5)</span></div>
+                        <div class="info-item"><strong>English Essay:</strong><span>Submitted - 85% (Due: Dec 3)</span></div>
+                        <div class="info-item"><strong>Biology Research:</strong><span>Pending (Due: Dec 15)</span></div>
+                        <div class="info-item"><strong>Computer Science Project:</strong><span>Pending (Due: Dec 18)</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Upcoming Deadlines</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Biology Research Paper:</strong><span>December 15, 2024</span></div>
+                        <div class="info-item"><strong>Computer Science Project:</strong><span>December 18, 2024</span></div>
+                        <div class="info-item"><strong>Physics Final Report:</strong><span>December 20, 2024</span></div>
+                        <div class="info-item"><strong>Chemistry Lab Report:</strong><span>December 22, 2024</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grades Section -->
+            <div id="grades" class="content-section">
+                <div class="section-title"><i class="fas fa-star"></i>Grades & Results</div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>88%</h3><p>Current GPA</p></div>
+                    <div class="stat-card"><h3>3.7</h3><p>Grade Point</p></div>
+                    <div class="stat-card"><h3>5th</h3><p>Class Rank</p></div>
+                    <div class="stat-card"><h3>A+</h3><p>Overall Grade</p></div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Term-wise Results</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>First Term (March-May):</strong><span>85% - Grade A</span></div>
+                        <div class="info-item"><strong>Mid Term (June-July):</strong><span>87% - Grade A</span></div>
+                        <div class="info-item"><strong>Current Term (August-December):</strong><span>88% - Grade A+</span></div>
+                        <div class="info-item"><strong>Projected Final:</strong><span>90% - Grade A+</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Detailed Subject Grades</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Physics:</strong><span>92% (A+) - Rank: 3rd</span></div>
+                        <div class="info-item"><strong>Chemistry:</strong><span>88% (A) - Rank: 5th</span></div>
+                        <div class="info-item"><strong>Biology:</strong><span>85% (A) - Rank: 7th</span></div>
+                        <div class="info-item"><strong>Mathematics:</strong><span>90% (A+) - Rank: 2nd</span></div>
+                        <div class="info-item"><strong>English:</strong><span>87% (A) - Rank: 6th</span></div>
+                        <div class="info-item"><strong>Nepali:</strong><span>89% (A) - Rank: 4th</span></div>
+                        <div class="info-item"><strong>Computer Science:</strong><span>94% (A+) - Rank: 1st</span></div>
+                        <div class="info-item"><strong>Social Studies:</strong><span>86% (A) - Rank: 8th</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses Section -->
+            <div id="courses" class="content-section">
+                <div class="section-title"><i class="fas fa-graduation-cap"></i>Course Information</div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>8</h3><p>Total Courses</p></div>
+                    <div class="stat-card"><h3>6</h3><p>Core Subjects</p></div>
+                    <div class="stat-card"><h3>2</h3><p>Elective Subjects</p></div>
+                    <div class="stat-card"><h3>35</h3><p>Total Credits</p></div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Core Subjects</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Physics:</strong><span>Mr. Devendra Khadka - 5 credits</span></div>
+                        <div class="info-item"><strong>Chemistry:</strong><span>Mr. Jaya Ram Ghimire - 5 credits</span></div>
+                        <div class="info-item"><strong>Biology:</strong><span>Mr. Tara Bahadur Gurung - 5 credits</span></div>
+                        <div class="info-item"><strong>Mathematics:</strong><span>Mr. Agni Datta Joshi - 5 credits</span></div>
+                        <div class="info-item"><strong>English:</strong><span>Dr. Anju Gupta - 4 credits</span></div>
+                        <div class="info-item"><strong>Nepali:</strong><span>Dr. Chudamani Pandey - 4 credits</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Elective Subjects</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Computer Science:</strong><span>Mr. Navin Gurung - 4 credits</span></div>
+                        <div class="info-item"><strong>Social Studies:</strong><span>Mr. Deepak Shrestha - 3 credits</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Class Schedule</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Monday:</strong><span>Physics, Chemistry, Mathematics, English</span></div>
+                        <div class="info-item"><strong>Tuesday:</strong><span>Biology, Computer Science, Nepali, Social Studies</span></div>
+                        <div class="info-item"><strong>Wednesday:</strong><span>Physics, Chemistry, Mathematics, English</span></div>
+                        <div class="info-item"><strong>Thursday:</strong><span>Biology, Computer Science, Nepali, Social Studies</span></div>
+                        <div class="info-item"><strong>Friday:</strong><span>Physics, Chemistry, Mathematics, English</span></div>
+                        <div class="info-item"><strong>Saturday:</strong><span>Biology, Computer Science, Nepali, Social Studies</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notices Section -->
+            <div id="notices" class="content-section">
+                <div class="section-title"><i class="fas fa-bell"></i>Notices & Announcements</div>
+
+                <div class="student-info">
+                    <h3>Recent Notices</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Annual Sports Meet:</strong><span>December 20-22, 2024 - All students must participate</span></div>
+                        <div class="info-item"><strong>Parent-Teacher Meeting:</strong><span>December 25, 2024 - 2:00 PM in Auditorium</span></div>
+                        <div class="info-item"><strong>Science Exhibition:</strong><span>December 28, 2024 - Submit projects by Dec 20</span></div>
+                        <div class="info-item"><strong>Winter Vacation:</strong><span>December 30, 2024 - January 15, 2025</span></div>
+                        <div class="info-item"><strong>Library Book Return:</strong><span>December 18, 2024 - Return all borrowed books</span></div>
+                        <div class="info-item"><strong>Computer Lab Maintenance:</strong><span>December 16-17, 2024 - Lab will be closed</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Academic Calendar</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Final Examinations:</strong><span>December 23-27, 2024</span></div>
+                        <div class="info-item"><strong>Result Publication:</strong><span>January 5, 2025</span></div>
+                        <div class="info-item"><strong>New Academic Year:</strong><span>January 20, 2025</span></div>
+                        <div class="info-item"><strong>Annual Function:</strong><span>January 15, 2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="chatbot-loader.js"></script>
+</body>
+</html> 

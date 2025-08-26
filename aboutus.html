@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Uniglobe SS/College</title>
+    <!-- sakshyam: yo ta about page ho, nishav tero hero section thik cha? -->
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* nishav: anup yo css thik cha? sakshyam: ha perfect cha */
+        .about-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 3px 3px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 5px;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: backgroundFloat 15s ease-in-out infinite;
+        }
+        
+        @keyframes backgroundFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(1deg); }
+            50% { transform: translateY(-40px) rotate(0deg); }
+            75% { transform: translateY(-20px) rotate(-1deg); }
+        }
+        
+        .about-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: slideInFromTop 1.5s ease-out;
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        @keyframes slideInFromTop {
+            0% { 
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            animation: slideInFromBottom 1s ease-out 0.5s both;
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+            line-height: 1.4;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        @keyframes slideInFromBottom {
+            0% { 
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 0.95;
+            }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+        }
+        
+        .about-content {
+            padding: 80px 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(240, 147, 251, 0.1) 0%, transparent 50%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .about-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="90" r="0.8" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="1.2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: starFloat 20s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes starFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        .about-section {
+            margin-bottom: 60px;
+            opacity: 1;
+            transform: translateY(0);
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        
+        .about-section:nth-child(odd) {
+            animation: slideInFromLeft 1.5s ease-out 0.3s both;
+            opacity: 0;
+            transform: translateX(-100px);
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .about-section:nth-child(even) {
+            animation: slideInFromRight 1.5s ease-out 0.6s both;
+            opacity: 0;
+            transform: translateX(100px);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .about-section:nth-child(even) h2 {
+            text-align: center;
+        }
+        
+        .about-section:nth-child(even) p {
+            text-align: center;
+        }
+        
+        @keyframes slideInFromLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInFromRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .about-section h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+        
+        .about-section:nth-child(odd) h2 {
+            text-align: center;
+            animation: titleGlowCenter 3s ease-in-out infinite alternate;
+        }
+        
+        .about-section:nth-child(even) h2 {
+            text-align: center;
+            animation: titleGlowCenter 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 5px rgba(102, 126, 234, 0.3); }
+            100% { text-shadow: 0 0 20px rgba(102, 126, 234, 0.6); }
+        }
+        
+        @keyframes titleGlowCenter {
+            0% { 
+                text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+                transform: scale(1);
+            }
+            100% { 
+                text-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+                transform: scale(1.05);
+            }
+        }
+        
+        .about-section h3 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .about-section:nth-child(odd) h3 {
+            text-align: center;
+        }
+        
+        .about-section:nth-child(even) h3 {
+            text-align: center;
+        }
+        
+        .about-section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .about-section:nth-child(odd) p {
+            text-align: center;
+            animation: textSlideCenter 2s ease-out 0.5s both;
+        }
+        
+        .about-section:nth-child(even) p {
+            text-align: center;
+            animation: textSlideCenter 2s ease-out 0.5s both;
+        }
+        
+        @keyframes textSlideCenter {
+            0% { 
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .programs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 40px auto;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .program-item {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            opacity: 1;
+            transform: translateX(0);
+            animation: programFloat 6s ease-in-out infinite;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .program-item:nth-child(even) {
+            flex-direction: row-reverse;
+            animation: programFloatReverse 6s ease-in-out infinite;
+        }
+        
+        .program-item:nth-child(1) {
+            animation-delay: 0s;
+            border-left: 5px solid #667eea;
+        }
+        
+        .program-item:nth-child(2) {
+            animation-delay: 1s;
+            border-right: 5px solid #764ba2;
+        }
+        
+        .program-item:nth-child(3) {
+            animation-delay: 2s;
+            border-left: 5px solid #f093fb;
+        }
+        
+        .program-item:nth-child(4) {
+            animation-delay: 3s;
+            border-right: 5px solid #f5576c;
+        }
+        
+        .program-item:nth-child(5) {
+            animation-delay: 4s;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        @keyframes programFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            }
+            25% { 
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            }
+            50% { 
+                transform: translateY(-10px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            }
+            75% { 
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            }
+        }
+        
+        @keyframes programFloatReverse {
+            0%, 100% { 
+                transform: translateY(0px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            }
+            25% { 
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            }
+            50% { 
+                transform: translateY(-10px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            }
+            75% { 
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            }
+        }
+        
+        .program-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .program-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            animation: iconPulse 3s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        
+        @keyframes iconPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+            }
+            50% { 
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+            }
+        }
+        
+        .program-content {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .program-content h4 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            animation: textGlow 4s ease-in-out infinite alternate;
+            text-align: center;
+        }
+        
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(102, 126, 234, 0.2); }
+            100% { text-shadow: 0 0 15px rgba(102, 126, 234, 0.4); }
+        }
+        
+        .program-content p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .principal-message {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            animation: slideInFromLeft 1s ease-out 1.2s both;
+            opacity: 0;
+            transform: translateX(-50px);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        
+        @keyframes slideInFromLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .principal-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .principal-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #667eea;
+            animation: photoGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes photoGlow {
+            0% { box-shadow: 0 0 10px rgba(102, 126, 234, 0.3); }
+            100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.6); }
+        }
+        
+        .principal-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .principal-info h3 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .principal-title {
+            color: #666;
+            font-size: 1.1rem;
+            font-style: italic;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .message-content {
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .message-content p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .principal-signature {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .principal-signature p {
+            color: #667eea;
+            font-size: 1.2rem;
+            margin: 0;
+            text-align: center;
+        }
+        
+        /* Clubs Section Styles */
+        .clubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px auto;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .club-item {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            animation: clubFloat 6s ease-in-out infinite;
+            border: 2px solid transparent;
+        }
+        
+        .club-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .club-item:hover::before {
+            left: 100%;
+        }
+        
+        .club-item:nth-child(1) { animation-delay: 0s; border-color: #667eea; }
+        .club-item:nth-child(2) { animation-delay: 0.5s; border-color: #764ba2; }
+        .club-item:nth-child(3) { animation-delay: 1s; border-color: #f093fb; }
+        .club-item:nth-child(4) { animation-delay: 1.5s; border-color: #f5576c; }
+        .club-item:nth-child(5) { animation-delay: 2s; border-color: #4CAF50; }
+        .club-item:nth-child(6) { animation-delay: 2.5s; border-color: #FF9800; }
+        .club-item:nth-child(7) { animation-delay: 3s; border-color: #9C27B0; }
+        .club-item:nth-child(8) { animation-delay: 3.5s; border-color: #2196F3; }
+        .club-item:nth-child(9) { animation-delay: 4s; border-color: #795548; }
+        .club-item:nth-child(10) { animation-delay: 4.5s; border-color: #607D8B; }
+        .club-item:nth-child(11) { animation-delay: 5s; border-color: #E91E63; }
+        
+        @keyframes clubFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            }
+            25% { 
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            }
+            50% { 
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            }
+            75% { 
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            }
+        }
+        
+        .club-item:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            border-color: #667eea;
+        }
+        
+        .club-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            animation: clubIconPulse 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .club-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .club-item:hover .club-icon img {
+            transform: scale(1.1);
+        }
+        
+        .club-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            opacity: 0.3;
+            animation: clubIconGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes clubIconPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+            }
+            50% { 
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+            }
+        }
+        
+        @keyframes clubIconGlow {
+            0% { 
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            100% { 
+                transform: scale(1.2);
+                opacity: 0.1;
+            }
+        }
+        
+        .club-content {
+            text-align: center;
+        }
+        
+        .club-content h4 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            animation: clubTitleGlow 4s ease-in-out infinite alternate;
+            position: relative;
+        }
+        
+        .club-content h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            animation: clubTitleUnderline 3s ease-in-out infinite;
+        }
+        
+        @keyframes clubTitleGlow {
+            0% { 
+                text-shadow: 0 0 5px rgba(102, 126, 234, 0.2);
+                transform: scale(1);
+            }
+            100% { 
+                text-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes clubTitleUnderline {
+            0%, 100% { width: 0; }
+            50% { width: 100px; }
+        }
+        
+        .club-content p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin: 0;
+            animation: clubTextSlide 2s ease-out 0.5s both;
+        }
+        
+        @keyframes clubTextSlide {
+            0% { 
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* AOS Animation Support */
+        [data-aos] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                max-width: 95%;
+                padding: 0 10px;
+            }
+            
+            .about-section:nth-child(odd),
+            .about-section:nth-child(even) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+            }
+            
+            .about-section:nth-child(odd) h2,
+            .about-section:nth-child(even) h2 {
+                text-align: center;
+            }
+            
+            .about-section:nth-child(odd) h3,
+            .about-section:nth-child(even) h3 {
+                text-align: center;
+            }
+            
+            .about-section:nth-child(odd) p,
+            .about-section:nth-child(even) p {
+                text-align: center;
+            }
+            
+            .program-item {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            
+            .program-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .program-content h4 {
+                font-size: 1.5rem;
+            }
+            
+            .clubs-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .club-item {
+                padding: 20px;
+            }
+            
+            .club-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .club-content h4 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <!-- nishav: anup yo navigation thik cha? sakshyam: ha thik cha -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/OIP.webp" alt="Uniglobe Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Uniglobe SS/College</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link active">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourteam.html" class="nav-link">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="qfas.html" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="mis.html" class="nav-link btn-mis">MIS Portal</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <!-- anup: sakshyam yo hero section thik cha? nishav: ha perfect cha -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Uniglobe SS/College</h1>
+            <p>Empowering minds, shaping futures, and bringing the best together</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <!-- sakshyam: nishav yo content section thik cha? anup: ha perfect cha -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Institution Overview -->
+            <!-- nishav: anup yo institution overview thik cha? sakshyam: ha perfect cha -->
+            <div class="about-section">
+                <h2>Our Institution</h2>
+                <p>Uniglobe Secondary School, located in the heart of Kathmandu, is a premier educational institution dedicated to providing quality education and fostering academic excellence. Founded with a vision to create global leaders, we have been at the forefront of educational innovation for over a decade.</p>
+                
+                <p>Our institution stands as a beacon of educational excellence, combining traditional values with modern teaching methodologies. We believe in nurturing not just academic excellence, but also character development, leadership skills, and social responsibility.</p>
+            </div>
+
+            <!-- Diverse Programs -->
+            <!-- anup: sakshyam yo programs section thik cha? nishav: ha perfect cha -->
+            <div class="about-section">
+                <h2>Diverse Programs</h2>
+                <p>We offer comprehensive educational programs designed to meet the diverse needs and aspirations of our students:</p>
+                
+                <div class="programs-grid">
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-flask"></i></div>
+                        <div class="program-content">
+                            <h4>Science Program</h4>
+                            <p>Our Science program provides a strong foundation in Physics, Chemistry, Biology, and Mathematics. Students engage in hands-on laboratory work, research projects, and practical applications of scientific principles. The program prepares students for careers in medicine, engineering, research, and technology.</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="program-content">
+                            <h4>Management Program</h4>
+                            <p>The Management program focuses on business administration, economics, accounting, and entrepreneurship. Students develop practical business skills through case studies and real-world projects. This program prepares future business leaders, entrepreneurs, and corporate professionals.</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-balance-scale"></i></div>
+                        <div class="program-content">
+                            <h4>Law Program</h4>
+                            <p>Our Law program introduces students to legal principles, constitutional law, and justice systems. Students participate in mock trials, legal research, and community service projects. The program prepares students for careers in law, judiciary, and legal advocacy.</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="program-content">
+                            <h4>Humanities Program</h4>
+                            <p>The Humanities program offers a comprehensive study of languages, literature, history, and philosophy. Students develop critical thinking, analytical skills, and a deep understanding of human culture and society. This program prepares students for careers in education, journalism, and cultural studies.</p>
+                        </div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-hotel"></i></div>
+                        <div class="program-content">
+                            <h4>Hotel Management Program</h4>
+                            <p>The Hotel Management program provides comprehensive training in hospitality, tourism, and service management. Students learn about hotel operations, customer service, event management, and tourism industry practices. This program prepares students for careers in hospitality, tourism, and service industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principal's Message -->
+            <!-- sakshyam: nishav yo principal ko message thik cha? anup: ha perfect cha -->
+            <div class="about-section">
+                <h2>Message from the Principal</h2>
+                <div class="principal-message">
+                    <div class="principal-info">
+                        <div class="principal-photo">
+                            <img src="images/adminstration team/Ganesh-Sir.png" alt="Dr. Ganesh Regmi">
+                        </div>
+                        <div>
+                            <h3>Dr. Ganesh Regmi</h3>
+                            <p class="principal-title">Principal of Uniglobe SS</p>
+                        </div>
+                    </div>
+                    <div class="message-content">
+                        <p>The future dreams of a nation can be substantiated only if its youths are concurrently mobilized to grasp knowledge, skills and ideas. It must stand instrumental in controlling the changing situations and tackling the challenges of the 21st century.</p>
+                        
+                        <p>A sound learning platform with proven efficiency geared to quality learning in the fields of management, law, science and technology is fiercely crucial for achieving a superb vision in the 21st-century academic milieu. Realizing the need for indomitable expertise in management, law, science and technology, Uniglobe has envisioned helping young dynamic scholars grab a plethora of opportunities.</p>
+                        
+                        <p>Uniglobe practises innovative and explorative activities such as group projects, leadership activities, critical and creative thinking activities, research activities, and national and international science exhibitions to materialize its vision.</p>
+                        
+                        <p>The sound and academically proven pedagogy blended with time-tested teaching learning technology applicable to achieving Uniglobe Secondary School's curricular objectives convincingly adds vigour to its highly professional teaching faculty appointed from diverse academic and intellectual portfolios of science, management and law streams.</p>
+                        
+                        <p>I would be happy to welcome you to the Uniglobe family to ensure your best future with a commitment to your dreams.</p>
+                        
+                        <div class="principal-signature">
+                            <p><strong>Dr. Ganesh Regmi</strong><br>
+                            Principal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Clubs Section -->
+            <!-- anup: sakshyam yo clubs section thik cha? nishav: ha perfect cha -->
+            <div class="about-section">
+                <h2>Our Clubs</h2>
+                <p>Discover the diverse range of clubs and activities that enrich student life at Uniglobe SS/College. Our clubs provide opportunities for students to explore their interests, develop skills, and build lasting friendships.</p>
+                
+                <div class="clubs-grid">
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="club-icon">
+                            <img src="images/images/debate club.jpg" alt="Debate Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Debate Club</h4>
+                            <p>Sharpening critical thinking, public speaking, and argumentation skills through structured debates.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="club-icon">
+                            <img src="images/images/interact club.jpg" alt="Interact Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Interact Club</h4>
+                            <p>Community service and leadership development through Rotary International's youth program.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="club-icon">
+                            <img src="images/images/it club.jpg" alt="IT Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>IT Club</h4>
+                            <p>Exploring technology, programming, and digital innovation through hands-on projects and workshops.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="club-icon">
+                            <img src="images/images/literary club.jpg" alt="Literary Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Literary Club</h4>
+                            <p>Fostering creativity through writing, poetry, storytelling, and literary discussions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="club-icon">
+                            <img src="images/images/MUN.jpg" alt="MUN Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>MUN Club</h4>
+                            <p>Model United Nations - Developing diplomatic skills, global awareness, and international relations understanding.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="club-icon">
+                            <img src="images/images/orders club.jpg" alt="Orders Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Orders Club</h4>
+                            <p>Recognizing excellence, leadership, and outstanding achievements within the school community.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="700">
+                        <div class="club-icon">
+                            <img src="images/images/science club.jpg" alt="Science Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Science Club</h4>
+                            <p>Conducting experiments, research projects, and scientific explorations to foster curiosity and innovation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="800">
+                        <div class="club-icon">
+                            <img src="images/images/social club.jpg" alt="Social Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Social Club</h4>
+                            <p>Building community connections, organizing events, and promoting social responsibility.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="900">
+                        <div class="club-icon">
+                            <img src="images/images/sports club.jpg" alt="Sports Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Sports Club</h4>
+                            <p>Promoting physical fitness, teamwork, and sportsmanship through various athletic activities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="club-icon">
+                            <img src="images/images/theater club.jpg" alt="Theater Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Theater Club</h4>
+                            <p>Exploring dramatic arts, stage performances, and creative expression through theatrical productions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="1100">
+                        <div class="club-icon">
+                            <img src="images/images/thinktank club.jpg" alt="ThinkTank Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>ThinkTank Club</h4>
+                            <p>Innovation and problem-solving through brainstorming sessions and creative thinking workshops.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="club-item" data-aos="fade-up" data-aos-delay="1200">
+                        <div class="club-icon">
+                            <img src="images/images/trios club.jpg" alt="Trios Club Logo">
+                        </div>
+                        <div class="club-content">
+                            <h4>Trios Club</h4>
+                            <p>Celebrating the power of three through music, art, and collaborative performances.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- owner UNI-ElITE -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/OIP.webp" alt="Uniglobe Logo" class="footer-logo-img">
+                        <h3>Uniglobe SS/College</h3>
+                    </div>
+                    <p>Empowering minds, shaping futures, and bringing <span style="color: #4CAF50;">the best together</span>.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="qfas.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Kamaladi, Ganeshthan Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> 01-5321875, 01-5320722, 01-5351409</p>
+                    <p><i class="fas fa-envelope"></i> info@uniglobecollege.edu.np</p>
+                    <p><i class="fas fa-mobile"></i> Mobile: 9851311179</p>
+                </div>
+                <div class="footer-section">
+                    <h4>MIS Portal</h4>
+                    <p>Access our Management Information System for students, parents, teachers, and administrators.</p>
+                    <a href="mis.html" class="btn btn-primary">Login to MIS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uniglobe SS/College. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chat-bubble">
+        <div class="bubble-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <span class="bubble-text">UGSS Sewa Sathi</span>
+    </div>
+
+    <!-- Chat Interface (Hidden by default) -->
+    <div class="chat-interface" id="chat-interface">
+        <div class="chat-header">
+            <h3>UGSS Sewa Sathi</h3>
+            <p>Ask me anything about Uniglobe College</p>
+            <button class="chat-close" id="chat-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <p>Namaste! 🙏 I'm your UGSS Sewa Sathi. How can I help you today? 🚀</p>
+                <p style="font-size: 11px; opacity: 0.7; margin-top: 5px;">✨ Deployed by UGSS_elite ✨<br>🤖 Powered by Gemini 2.0 Flash 🤖<br>🎉 Part of Hackathon Event 🎉<br>🔧 Still in Beta Deployment Phase 🔧</p>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message and press Enter..." />
+        </div>
+    </div>
+
+    <script src="homepage.js"></script>
+    <script src="chat.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        
+        // Add custom club animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const clubItems = document.querySelectorAll('.club-item');
+            
+            // Add staggered animation for club items
+            clubItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                
+                // Add hover effects
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.05)';
+                    this.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.2)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

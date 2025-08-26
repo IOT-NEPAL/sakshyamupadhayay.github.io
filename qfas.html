@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Uniglobe SS/College</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faqs-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .faqs-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .faqs-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .faqs-content {
+            padding: 80px 0;
+        }
+        
+        .faqs-section {
+            margin-bottom: 80px;
+        }
+        
+        .faqs-section h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .faq-question h3 {
+            color: #333;
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .faq-question i {
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/OIP.webp" alt="Uniglobe Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Uniglobe SS/College</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourteam.html" class="nav-link">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="qfas.html" class="nav-link active">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="mis.html" class="nav-link btn-mis">MIS Portal</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQs Hero Section -->
+    <section class="faqs-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our institution</p>
+        </div>
+    </section>
+
+    <!-- FAQs Content -->
+    <section class="faqs-content">
+        <div class="container">
+            <div class="faqs-section">
+                <h2>General Information</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What are the admission requirements for Uniglobe SS/College?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Admission requirements include completed application forms, academic transcripts from previous institutions, entrance examination results, and a personal interview. Students must meet minimum academic standards and demonstrate commitment to learning. Please contact our admissions office for specific details and application deadlines.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What programs do you offer at Uniglobe SS/College?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer comprehensive programs including Science (Physics, Chemistry, Biology, Mathematics), Management (Business Administration, Economics, Accounting), and Law (Constitutional Law, Criminal Law, Civil Law). Each program is designed to meet industry standards and prepare students for higher education and career success.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is the student-teacher ratio at your institution?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We maintain an optimal student-teacher ratio of approximately 20:1 to ensure personalized attention and quality education. Our small class sizes allow for interactive learning, individual mentoring, and better academic support for each student.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What facilities are available on campus?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our campus features modern classrooms with smart boards, well-equipped science laboratories, computer labs with latest software, a comprehensive library, sports facilities including a multi-purpose ground, cafeteria, health services, and Wi-Fi connectivity throughout the campus. We also have dedicated study areas and counseling services.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I access the MIS portal?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can access the MIS portal by clicking the "MIS Portal" button in the navigation menu. Different user types (Admin, Teacher, Student, Parent) have separate login credentials. Contact the administration for your login credentials if you haven't received them.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is the academic calendar and schedule?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our academic year typically runs from April to March, with regular breaks for holidays and examinations. Classes are held Monday through Friday from 9:00 AM to 4:00 PM, with additional activities and clubs available after school hours. Detailed academic calendars are provided to students at the beginning of each term.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you provide transportation services?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide safe and reliable transportation services covering major areas of Kathmandu. Our fleet of buses operates on scheduled routes with trained drivers and conductors. Transportation fees are included in the annual fee structure, and routes are designed to ensure convenient access for students.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What extracurricular activities are available?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a wide range of extracurricular activities including sports (football, basketball, cricket, athletics), cultural activities (music, dance, drama), academic clubs (science, debate, literature), community service programs, and leadership development initiatives. Students are encouraged to participate in activities that align with their interests and talents.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you support students with special needs?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We are committed to inclusive education and provide support for students with special needs through specialized teaching methods, accessible facilities, counseling services, and individualized learning plans. Our staff includes trained professionals who work closely with students and parents to ensure academic success and personal development.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is the fee structure and payment schedule?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our fee structure is transparent and includes tuition, laboratory fees, library access, and basic facilities. Fees can be paid annually, semi-annually, or monthly as per convenience. We also offer scholarships and financial aid for deserving students. Detailed fee breakdowns are provided during admission and are available in the administration office.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you ensure student safety and security?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Student safety is our top priority. We have comprehensive security measures including CCTV surveillance, trained security personnel, controlled access to campus, emergency response protocols, and regular safety drills. We also maintain strict visitor policies and ensure all staff undergo background checks.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What career guidance and counseling services do you provide?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide comprehensive career guidance through individual counseling sessions, career assessment tests, workshops on various career options, university application guidance, and regular interactions with industry professionals. Our counseling team helps students make informed decisions about their academic and career paths.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you communicate with parents about student progress?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We maintain regular communication with parents through parent-teacher conferences, progress reports, digital communication platforms, and the MIS portal where parents can access their child's academic records, attendance, and performance updates. We also have an open-door policy for parent consultations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your approach to technology integration in education?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We integrate technology throughout our curriculum using smart classrooms, computer-aided learning, online resources, and digital assessment tools. Students learn essential digital skills while maintaining a balance with traditional learning methods. Our computer labs are equipped with the latest software and hardware.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you handle student discipline and behavior management?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We follow a positive discipline approach that focuses on character development, self-discipline, and mutual respect. Our behavior management system includes clear expectations, consistent consequences, counseling support, and opportunities for students to learn from mistakes and grow personally.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is the school's policy on attendance and punctuality?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We emphasize regular attendance and punctuality as essential life skills. Students are expected to maintain at least 85% attendance. Absences must be communicated in advance, and medical certificates are required for extended absences. Regular attendance is linked to academic performance and participation in examinations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you prepare students for higher education and careers?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We prepare students through rigorous academic programs, skill development workshops, career exploration activities, university application guidance, and industry exposure programs. Our alumni network and partnerships with universities and companies help students make informed decisions about their future education and career paths.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What measures do you take to maintain academic excellence?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We maintain academic excellence through qualified faculty, updated curriculum, regular assessments, continuous professional development for teachers, modern teaching methodologies, and a supportive learning environment. We also conduct regular academic reviews and implement improvements based on student performance and feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/OIP.webp" alt="Uniglobe Logo" class="footer-logo-img">
+                        <h3>Uniglobe SS/College</h3>
+                    </div>
+                    <p>Empowering minds, shaping futures, and bringing the best together.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="qfas.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Kamaladi, Ganeshthan Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> 01-5321875, 01-5320722, 01-5351409</p>
+                    <p><i class="fas fa-envelope"></i> info@uniglobecollege.edu.np</p>
+                    <p><i class="fas fa-mobile"></i> Mobile: 9851311179</p>
+                </div>
+                <div class="footer-section">
+                    <h4>MIS Portal</h4>
+                    <p>Access our Management Information System for students, parents, teachers, and administrators.</p>
+                    <a href="mis.html" class="btn btn-primary">Login to MIS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uniglobe SS/College. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chat-bubble">
+        <div class="bubble-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <span class="bubble-text">UGSS Sewa Sathi</span>
+    </div>
+
+    <!-- Chat Interface (Hidden by default) -->
+    <div class="chat-interface" id="chat-interface">
+        <div class="chat-header">
+            <h3>UGSS Sewa Sathi</h3>
+            <p>Ask me anything about Uniglobe College</p>
+            <button class="chat-close" id="chat-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <p>Namaste! 🙏 I'm your UGSS Sewa Sathi. How can I help you today? 🚀</p>
+                <p style="font-size: 11px; opacity: 0.7; margin-top: 5px;">✨ Deployed by UGSS_elite ✨<br>🤖 Powered by Gemini 2.0 Flash 🤖<br>🎉 Part of Hackathon Event 🎉<br>🔧 Still in Beta Deployment Phase 🔧</p>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message and press Enter..." />
+        </div>
+    </div>
+
+    <script src="homepage.js"></script>
+    <script src="chat.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Close all other answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        if (ans !== answer) {
+                            ans.classList.remove('active');
+                            ans.previousElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current answer
+                    answer.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

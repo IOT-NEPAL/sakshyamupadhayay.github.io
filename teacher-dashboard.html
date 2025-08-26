@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Uniglobe SS/College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="images/OIP.webp" alt="Teacher Avatar">
+                <h3>Mr. Agni Datta Joshi</h3>
+                <p>Mathematics Teacher</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#dashboard" class="nav-link active" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="#schedule" class="nav-link" onclick="showSection('schedule')"><i class="fas fa-calendar"></i>Schedule</a></li>
+                <li class="nav-item"><a href="#students" class="nav-link" onclick="showSection('students')"><i class="fas fa-users"></i>Students</a></li>
+                <li class="nav-item"><a href="#attendance" class="nav-link" onclick="showSection('attendance')"><i class="fas fa-calendar-check"></i>Attendance</a></li>
+                <li class="nav-item"><a href="#grades" class="nav-link" onclick="showSection('grades')"><i class="fas fa-chart-line"></i>Grades</a></li>
+                <li class="nav-item"><a href="#assignments" class="nav-link" onclick="showSection('assignments')"><i class="fas fa-tasks"></i>Assignments</a></li>
+                <li class="nav-item"><a href="#communication" class="nav-link" onclick="showSection('communication')"><i class="fas fa-comments"></i>Communication</a></li>
+                <li class="nav-item"><a href="#analytics" class="nav-link" onclick="showSection('analytics')"><i class="fas fa-chart-bar"></i>Analytics</a></li>
+                <li class="nav-item"><a href="#notices" class="nav-link" onclick="showSection('notices')"><i class="fas fa-bullhorn"></i>Notices</a></li>
+                <li class="nav-item"><a href="teacher-login.html" class="nav-link"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="dashboard-header">
+                <h1 id="pageTitle">Teacher Dashboard</h1>
+                <p id="pageSubtitle">Welcome back, Mr. Joshi! Here's your overview for today.</p>
+            </div>
+
+            <!-- Dashboard Section -->
+            <div id="dashboard" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>28</h3><p>Total Students</p></div>
+                    <div class="stat-card"><h3>85%</h3><p>Average Attendance</p></div>
+                    <div class="stat-card"><h3>92%</h3><p>Assignment Completion</p></div>
+                    <div class="stat-card"><h3>4.2</h3><p>Average Grade</p></div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Today's Schedule</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>8:00 AM - 9:00 AM:</strong><span>Mathematics - Grade 10A (Room 201)</span></div>
+                        <div class="info-item"><strong>9:15 AM - 10:15 AM:</strong><span>Mathematics - Grade 9B (Room 201)</span></div>
+                        <div class="info-item"><strong>10:30 AM - 11:30 AM:</strong><span>Mathematics - Grade 11C (Room 201)</span></div>
+                    </div>
+                </div>
+
+                <div class="student-info">
+                    <h3>Recent Messages</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Parent - Hari Pandey:</strong><span>"How is my daughter performing in mathematics class?"</span></div>
+                        <div class="info-item"><strong>Student - Gita Thapa:</strong><span>"I need help with the calculus assignment due tomorrow."</span></div>
+                        <div class="info-item"><strong>Admin - Principal:</strong><span>"Staff meeting scheduled for Friday at 3 PM."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Section -->
+            <div id="schedule" class="content-section">
+                <div class="section-title"><i class="fas fa-calendar"></i>Class Schedule</div>
+                <div class="student-info">
+                    <h3>Weekly Schedule</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Monday:</strong><span>Grade 10A, 9B, 11C</span></div>
+                        <div class="info-item"><strong>Tuesday:</strong><span>Grade 10B, 9A, 12A</span></div>
+                        <div class="info-item"><strong>Wednesday:</strong><span>Grade 10C, 9C, 11A</span></div>
+                        <div class="info-item"><strong>Thursday:</strong><span>Grade 10A, 9B, 11C</span></div>
+                        <div class="info-item"><strong>Friday:</strong><span>Grade 10B, 9A, 12A</span></div>
+                        <div class="info-item"><strong>Saturday:</strong><span>Grade 10C, 9C, 11A</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Students Section -->
+            <div id="students" class="content-section">
+                <div class="section-title"><i class="fas fa-users"></i>Student Management</div>
+                <div class="student-info">
+                    <h3>Class Students</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Bikash Thapa:</strong><span>Grade 11 - Science (Average: 88%)</span></div>
+                        <div class="info-item"><strong>Gita Thapa:</strong><span>Grade 10 - Science (Average: 92%)</span></div>
+                        <div class="info-item"><strong>Ram Bahadur Gurung:</strong><span>Grade 12 - Science (Average: 78%)</span></div>
+                        <div class="info-item"><strong>Sita Tamang:</strong><span>Grade 11 - Science (Average: 88%)</span></div>
+                        <div class="info-item"><strong>Rajesh Karki:</strong><span>Grade 10 - Science (Average: 85%)</span></div>
+                        <div class="info-item"><strong>Sunita Shrestha:</strong><span>Grade 12 - Science (Average: 90%)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attendance Section -->
+            <div id="attendance" class="content-section">
+                <div class="section-title"><i class="fas fa-calendar-check"></i>Attendance Management</div>
+                <div class="student-info">
+                    <h3>Today's Attendance</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Bikash Thapa:</strong><span>Present</span></div>
+                        <div class="info-item"><strong>Gita Thapa:</strong><span>Present</span></div>
+                        <div class="info-item"><strong>Ram Bahadur Gurung:</strong><span>Absent</span></div>
+                        <div class="info-item"><strong>Sita Tamang:</strong><span>Present</span></div>
+                        <div class="info-item"><strong>Rajesh Karki:</strong><span>Present</span></div>
+                        <div class="info-item"><strong>Sunita Shrestha:</strong><span>Present</span></div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn btn-primary"><i class="fas fa-save"></i>Save Attendance</button>
+                </div>
+            </div>
+
+            <!-- Grades Section -->
+            <div id="grades" class="content-section">
+                <div class="section-title"><i class="fas fa-chart-line"></i>Grade Management</div>
+                <div class="student-info">
+                    <h3>Recent Assignments</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Calculus Quiz #3:</strong><span>Bikash Thapa - 85/100</span></div>
+                        <div class="info-item"><strong>Calculus Quiz #3:</strong><span>Gita Thapa - 92/100</span></div>
+                        <div class="info-item"><strong>Calculus Quiz #3:</strong><span>Ram Bahadur Gurung - 78/100</span></div>
+                        <div class="info-item"><strong>Calculus Quiz #3:</strong><span>Sita Tamang - 88/100</span></div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn btn-primary"><i class="fas fa-chart-line"></i>Generate Grade Report</button>
+                </div>
+            </div>
+
+            <!-- Assignments Section -->
+            <div id="assignments" class="content-section">
+                <div class="section-title"><i class="fas fa-tasks"></i>Assignment Management</div>
+                <div class="student-info">
+                    <h3>Current Assignments</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Calculus Quiz #3:</strong><span>Active - Due: Dec 15, 2024 (18/25 submissions)</span></div>
+                        <div class="info-item"><strong>Algebra Quiz #2:</strong><span>Draft - Due: Dec 20, 2024 (0/25 submissions)</span></div>
+                        <div class="info-item"><strong>Final Project:</strong><span>Planned - Due: Dec 25, 2024 (0/18 submissions)</span></div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i>Create New Assignment</button>
+                </div>
+            </div>
+
+            <!-- Communication Section -->
+            <div id="communication" class="content-section">
+                <div class="section-title"><i class="fas fa-comments"></i>Messages & Communication</div>
+                <div class="student-info">
+                    <h3>Recent Messages</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Parent - Hari Pandey:</strong><span>"How is my daughter performing in mathematics class?"</span></div>
+                        <div class="info-item"><strong>Student - Gita Thapa:</strong><span>"I need help with the calculus assignment due tomorrow."</span></div>
+                        <div class="info-item"><strong>Admin - Principal:</strong><span>"Staff meeting scheduled for Friday at 3 PM."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div id="analytics" class="content-section">
+                <div class="section-title"><i class="fas fa-chart-bar"></i>Performance Analytics</div>
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>28</h3><p>Total Students</p></div>
+                    <div class="stat-card"><h3>85%</h3><p>Average Attendance</p></div>
+                    <div class="stat-card"><h3>92%</h3><p>Assignment Completion</p></div>
+                    <div class="stat-card"><h3>4.2</h3><p>Average Grade</p></div>
+                </div>
+                <div class="student-info">
+                    <h3>Class Performance Trends</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Grade 10A:</strong><span>85% performance</span></div>
+                        <div class="info-item"><strong>Grade 11C:</strong><span>78% performance</span></div>
+                        <div class="info-item"><strong>Grade 12A:</strong><span>92% performance</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notices Section -->
+            <div id="notices" class="content-section">
+                <div class="section-title"><i class="fas fa-bullhorn"></i>Important Notices</div>
+                <div class="student-info">
+                    <h3>Recent Notices</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><strong>Parent-Teacher Conference:</strong><span>December 20th, 2024 - 2:00 PM - 6:00 PM</span></div>
+                        <div class="info-item"><strong>Department Meeting:</strong><span>December 8th, 2024 - 2:00 PM</span></div>
+                        <div class="info-item"><strong>System Maintenance:</strong><span>December 15th, 2024 - 2:00 AM - 6:00 AM</span></div>
+                        <div class="info-item"><strong>Professional Development:</strong><span>January 15th, 2025 - 9:00 AM - 3:00 PM</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="chatbot-loader.js"></script>
+</body>
+</html> 

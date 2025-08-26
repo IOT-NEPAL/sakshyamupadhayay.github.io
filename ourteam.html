@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Uniglobe SS/College</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .team-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .team-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+            animation: slideInFromTop 1.5s ease-out;
+            position: relative;
+        }
+        
+        .team-hero h1::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 3s ease-in-out infinite;
+            z-index: -1;
+            border-radius: 15px;
+            opacity: 0.3;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes slideInFromTop {
+            0% { 
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .team-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: slideInFromBottom 1s ease-out 0.5s both;
+        }
+        
+        @keyframes slideInFromBottom {
+            0% { 
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 0.9;
+            }
+        }
+        
+        .team-content {
+            padding: 80px 0;
+        }
+        
+        .team-section {
+            margin-bottom: 80px;
+        }
+        
+        .team-section h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 5px rgba(102, 126, 234, 0.3); }
+            100% { text-shadow: 0 0 20px rgba(102, 126, 234, 0.6); }
+        }
+        
+        .team-section h3 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: cardFloat 0.6s ease-out;
+        }
+        
+        @keyframes cardFloat {
+            0% { 
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-image {
+            height: 280px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+        
+        .member-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .member-info {
+            padding: 25px;
+        }
+        
+        .member-info h4 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .member-role {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .member-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .department-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .department-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #667eea;
+        }
+        
+        .department-card h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .department-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .faculty-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .faculty-member {
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid #f0f0f0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faculty-member:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .faculty-images img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 3px solid #667eea;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faculty-images img:hover {
+            transform: scale(1.05);
+            border-color: #764ba2;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .faculty-name {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.2;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .modal-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 4px solid #667eea;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .modal-department {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .modal-role {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: #999;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #667eea;
+        }
+        
+        /* Enhanced background for white sections */
+        .team-content {
+            padding: 80px 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+        }
+        
+        @keyframes backgroundFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(1deg); }
+            50% { transform: translateY(-40px) rotate(0deg); }
+            75% { transform: translateY(-20px) rotate(-1deg); }
+        }
+        
+        .department-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #667eea;
+            border: 2px solid #f0f0f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .department-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .department-card:hover::before {
+            left: 100%;
+        }
+        
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 2px solid #f0f0f0;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+        
+        /* Science Department Grid - 2 columns */
+        .science-department-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .science-department-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #667eea;
+            border: 2px solid #f0f0f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .science-department-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .science-department-card:hover::before {
+            left: 100%;
+        }
+        
+        .science-department-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .science-department-card h4 {
+            color: #333;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .science-department-card h4::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+            animation: pulse 2s infinite;
+        }
+        
+        .science-department-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Floating particles animation */
+        .floating-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(102, 126, 234, 0.3);
+            border-radius: 50%;
+            animation: particleFloat 15s linear infinite;
+        }
+        
+        .particle:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .particle:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+        
+        .particle:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 6s;
+        }
+        
+        .particle:nth-child(4) {
+            top: 60%;
+            right: 25%;
+            animation-delay: 9s;
+        }
+        
+        .particle:nth-child(5) {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 12s;
+        }
+        
+        @keyframes particleFloat {
+            0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .principal-message {
+                padding: 30px;
+            }
+            
+            .principal-info {
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .principal-photo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .principal-info h3 {
+                font-size: 2rem;
+            }
+            
+            .message-content p {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-section p {
+                margin: 0 10px 25px 10px;
+                padding: 15px;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            /* Science department responsive */
+            .science-department-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .science-department-card {
+                padding: 20px;
+            }
+            
+            .science-department-card h4 {
+                font-size: 1.2rem;
+            }
+            
+            /* Faculty images responsive */
+            .faculty-images {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 15px;
+            }
+            
+            .faculty-images img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .faculty-name {
+                font-size: 0.8rem;
+            }
+            
+            /* Department grid responsive */
+            .department-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .department-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/OIP.webp" alt="Uniglobe Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Uniglobe SS/College</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourteam.html" class="nav-link active">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="qfas.html" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="mis.html" class="nav-link btn-mis">MIS Portal</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Hero Section -->
+    <section class="team-hero">
+        <div class="container">
+            <h1>Our Team & Faculty</h1>
+            <p>Meet the dedicated professionals guiding our institution</p>
+        </div>
+    </section>
+
+    <!-- Team Content -->
+    <section class="team-content">
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="container">
+            <!-- Executive Members -->
+            <div class="team-section">
+                <h2>Executive Leadership</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="images/adminstration team/Ganesh-Sir.png" alt="Dr. Ganesh Regmi" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="member-info">
+                            <h4>Dr. Ganesh Regmi</h4>
+                            <p class="member-role">Principal</p>
+                            <p class="member-description">Leading our institution with over 15 years of educational leadership experience. Dr. Regmi holds a Ph.D. in Educational Leadership and has been instrumental in implementing innovative teaching methodologies.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="images/adminstration team/ramesh datta panday.png" alt="CA. Ramesh Datt Pandey" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="member-info">
+                            <h4>CA. Ramesh Datt Pandey</h4>
+                            <p class="member-role">CFO (Group)</p>
+                            <p class="member-description">Overseeing financial excellence and institutional development programs. CA. Pandey specializes in financial management and institutional development strategies.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="images/adminstration team/Dill-Ram-Sir.png" alt="Mr. Dilli Ram Upreti" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="member-info">
+                            <h4>Mr. Dilli Ram Upreti</h4>
+                            <p class="member-role">Program Director, Science Stream</p>
+                            <p class="member-description">Managing institutional operations and administrative excellence. Mr. Upreti ensures smooth day-to-day operations and maintains high standards of service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Administrative Staff -->
+            <div class="team-section">
+                <h2>Administrative Staff</h2>
+                <div class="science-department-grid">
+                    <div class="science-department-card">
+                        <h4>Program Directors & Coordinators</h4>
+                        <p><strong>Management & Law Director:</strong> Mr. Shekhar Adhikari</p>
+                        <p><strong>Associate Program Coordinator (Science):</strong> Mr. Krishna Dhungana</p>
+                        <p><strong>Associate Program Coordinator (Management & Law):</strong> Mr. Suraj Kumar Thapa</p>
+                        <p>Leading academic programs and ensuring quality education delivery across all streams.</p>
+                        <p><strong>Administrative Team:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Shekhar Adhikari', 'Program Director', 'Management & Law', 'images/adminstration team/Shekhar-Sir.png')">
+                                <img src="images/adminstration team/Shekhar-Sir.png" alt="Shekhar Adhikari" title="Shekhar Adhikari">
+                                <div class="faculty-name">Shekhar Adhikari</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Krishna Dhungana', 'Associate Program Coordinator', 'Science Stream', 'images/adminstration team/Krishna-Sir.png')">
+                                <img src="images/adminstration team/Krishna-Sir.png" alt="Krishna Dhungana" title="Krishna Dhungana">
+                                <div class="faculty-name">Krishna Dhungana</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Suraj Kumar Thapa', 'Associate Program Coordinator', 'Management & Law', 'images/adminstration team/Suraj-Thapa.png')">
+                                <img src="images/adminstration team/Suraj-Thapa.png" alt="Suraj Kumar Thapa" title="Suraj Kumar Thapa">
+                                <div class="faculty-name">Suraj Kumar Thapa</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="science-department-card">
+                        <h4>Examination Department</h4>
+                        <p><strong>Exam Coordinator:</strong> Mr. Basanta Ghimire</p>
+                        <p><strong>In-charge Examination:</strong> Mr. Harish Bhatta</p>
+                        <p>Managing examination processes and ensuring academic integrity across all programs.</p>
+                        <p><strong>Exam Team:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Basanta Ghimire', 'Exam Department', 'Exam Coordinator', 'images/adminstration team/Basanta.png')">
+                                <img src="images/adminstration team/Basanta.png" alt="Basanta Ghimire" title="Basanta Ghimire">
+                                <div class="faculty-name">Basanta Ghimire</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Harish Bhatta', 'Exam Department', 'In-charge Examination', 'images/adminstration team/Harish-Bhatta.png')">
+                                <img src="images/adminstration team/Harish-Bhatta.png" alt="Harish Bhatta" title="Harish Bhatta">
+                                <div class="faculty-name">Harish Bhatta</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="science-department-grid">
+                    <div class="science-department-card">
+                        <h4>Finance Department</h4>
+                        <p><strong>General Manager (Head-Finance):</strong> Mr. Ganesh Bhatta</p>
+                        <p><strong>Senior Officer - Finance:</strong> Mr. Prakash Acharya</p>
+                        <p><strong>Assistant Finance Manager:</strong> Mr. Negam Raj Regmi</p>
+                        <p><strong>Office Assistant:</strong> Mr. Ram B. Kalel</p>
+                        <p>Managing financial operations and ensuring fiscal responsibility across all activities.</p>
+                        <p><strong>Finance Team:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Ganesh Bhatta', 'Finance Department', 'General Manager (Head-Finance)', 'images/adminstration team/Ganesh-Bhatta.png')">
+                                <img src="images/adminstration team/Ganesh-Bhatta.png" alt="Ganesh Bhatta" title="Ganesh Bhatta">
+                                <div class="faculty-name">Ganesh Bhatta</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Prakash Acharya', 'Finance Department', 'Senior Officer - Finance', 'images/adminstration team/Prakash-Acharaya.png')">
+                                <img src="images/adminstration team/Prakash-Acharaya.png" alt="Prakash Acharya" title="Prakash Acharya">
+                                <div class="faculty-name">Prakash Acharya</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Negam Raj Regmi', 'Finance Department', 'Assistant Finance Manager', 'images/adminstration team/nigamraj regmi.png')">
+                                <img src="images/adminstration team/nigamraj regmi.png" alt="Negam Raj Regmi" title="Negam Raj Regmi">
+                                <div class="faculty-name">Negam Raj Regmi</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Ram B. Kalel', 'Finance Department', 'Office Assistant', 'images/adminstration team/Ram-Kadel.png')">
+                                <img src="images/adminstration team/Ram-Kadel.png" alt="Ram B. Kalel" title="Ram B. Kalel">
+                                <div class="faculty-name">Ram B. Kalel</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="science-department-card">
+                        <h4>ECA & Sports Department</h4>
+                        <p><strong>ECA/CCA Incharge:</strong> Mr. Netra Bahadur Gurung</p>
+                        <p><strong>Sports Instructor:</strong> Mr. Dipesh Maharjan</p>
+                        <p><strong>Sports In-charge:</strong> Mr. Madhav Raut</p>
+                        <p><strong>Sports Instructor:</strong> Mr. Nischal Tandukar</p>
+                        <p>Coordinating extra-curricular activities and sports programs for student development.</p>
+                        <p><strong>ECA & Sports Team:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Netra Bahadur Gurung', 'ECA Department', 'ECA/CCA Incharge', 'images/adminstration team/N.B-Gurung.png')">
+                                <img src="images/adminstration team/N.B-Gurung.png" alt="Netra Bahadur Gurung" title="Netra Bahadur Gurung">
+                                <div class="faculty-name">Netra Bahadur Gurung</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Dipesh Maharjan', 'Sports Department', 'Sports Instructor', 'images/adminstration team/Dipesh-Maharajn.png')">
+                                <img src="images/adminstration team/Dipesh-Maharajn.png" alt="Dipesh Maharjan" title="Dipesh Maharjan">
+                                <div class="faculty-name">Dipesh Maharjan</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Madhav Raut', 'Sports Department', 'Sports In-charge', 'images/adminstration team/Madhav-Raut.png')">
+                                <img src="images/adminstration team/Madhav-Raut.png" alt="Madhav Raut" title="Madhav Raut">
+                                <div class="faculty-name">Madhav Raut</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Nischal Tandukar', 'Sports Department', 'Sports Instructor', 'images/adminstration team/Nischal-Maharjan.png')">
+                                <img src="images/adminstration team/Nischal-Maharjan.png" alt="Nischal Tandukar" title="Nischal Tandukar">
+                                <div class="faculty-name">Nischal Tandukar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="science-department-grid">
+                    <div class="science-department-card">
+                        <h4>IT & Documentation Department</h4>
+                        <p><strong>IT In-charge:</strong> Mr. Anil Pantha</p>
+                        <p><strong>Documentation Officer:</strong> Mr. Rajeev Bajracharya</p>
+                        <p><strong>Documentation Officer:</strong> Mr. Suman Oli</p>
+                        <p>Managing information technology infrastructure and institutional documentation.</p>
+                        <p><strong>IT & Documentation Team:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Anil Pantha', 'IT Department', 'IT In-charge', 'images/adminstration team/Anil-Pantha-1-1.png')">
+                                <img src="images/adminstration team/Anil-Pantha-1-1.png" alt="Anil Pantha" title="Anil Pantha">
+                                <div class="faculty-name">Anil Pantha</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Rajeev Bajracharya', 'Documentation Department', 'Documentation Officer', 'images/adminstration team/Rajeevi-Sir.png')">
+                                <img src="images/adminstration team/Rajeevi-Sir.png" alt="Rajeev Bajracharya" title="Rajeev Bajracharya">
+                                <div class="faculty-name">Rajeev Bajracharya</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Suman Oli', 'Documentation Department', 'Documentation Officer', 'images/adminstration team/Suman-Oli.png')">
+                                <img src="images/adminstration team/Suman-Oli.png" alt="Suman Oli" title="Suman Oli">
+                                <div class="faculty-name">Suman Oli</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="science-department-card">
+                        <h4>Library & Health Services</h4>
+                        <p><strong>IRC In-charge:</strong> Mr. Sharad Basnet</p>
+                        <p><strong>Nurse:</strong> Ms. Deepa Panta</p>
+                        <p>Providing information resources and healthcare services to support student well-being.</p>
+                        <p><strong>Library & Health Team:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Sharad Basnet', 'Library Department', 'IRC In-charge', 'images/adminstration team/Sharad-Basnet.png')">
+                                <img src="images/adminstration team/Sharad-Basnet.png" alt="Sharad Basnet" title="Sharad Basnet">
+                                <div class="faculty-name">Sharad Basnet</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Deepa Panta', 'Health Services', 'Nurse', 'images/adminstration team/Deepa-Pata.png')">
+                                <img src="images/adminstration team/Deepa-Pata.png" alt="Deepa Panta" title="Deepa Panta">
+                                <div class="faculty-name">Deepa Panta</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Departments -->
+            <div class="team-section">
+                <h2>Academic Departments</h2>
+                
+                <h3>Science Department</h3>
+                <div class="science-department-grid">
+                    <div class="science-department-card">
+                        <h4>Physics Department</h4>
+                        <p><strong>Head:</strong> Mr. Devendra Khadka</p>
+                        <p><strong>Faculty:</strong> 11 members</p>
+                        <p>Specializing in mechanics, thermodynamics, and modern physics with state-of-the-art laboratory facilities.</p>
+                        <p><strong>Faculty Members:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Devendra Khadka', 'Physics Department', 'Head of Department', 'images/physics/DK.png')">
+                                <img src="images/physics/DK.png" alt="Devendra Khadka" title="Devendra Khadka">
+                                <div class="faculty-name">Devendra Khadka</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Ajaya Jha', 'Physics Department', 'Faculty Member', 'images/physics/AJ.png')">
+                                <img src="images/physics/AJ.png" alt="Ajaya Jha" title="Ajaya Jha">
+                                <div class="faculty-name">Ajaya Jha</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Shesh Raj Bhandari', 'Physics Department', 'Faculty Member', 'images/physics/SRB.png')">
+                                <img src="images/physics/SRB.png" alt="Shesh Raj Bhandari" title="Shesh Raj Bhandari">
+                                <div class="faculty-name">Shesh Raj Bhandari</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Dipesh Kumar Das', 'Physics Department', 'Faculty Member', 'images/physics/DKD.png')">
+                                <img src="images/physics/DKD.png" alt="Dipesh Kumar Das" title="Dipesh Kumar Das">
+                                <div class="faculty-name">Dipesh Kumar Das</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Milan Thapa', 'Physics Department', 'Faculty Member', 'images/physics/MT.png')">
+                                <img src="images/physics/MT.png" alt="Milan Thapa" title="Milan Thapa">
+                                <div class="faculty-name">Milan Thapa</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Ram Hari Timalsina', 'Physics Department', 'Faculty Member', 'images/physics/RHT.png')">
+                                <img src="images/physics/RHT.png" alt="Ram Hari Timalsina" title="Ram Hari Timalsina">
+                                <div class="faculty-name">Ram Hari Timalsina</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Sushil Upreti', 'Physics Department', 'Faculty Member', 'images/physics/SU.png')">
+                                <img src="images/physics/SU.png" alt="Sushil Upreti" title="Sushil Upreti">
+                                <div class="faculty-name">Sushil Upreti</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Amrit Basnet', 'Physics Department', 'Faculty Member', 'images/physics/AB.png')">
+                                <img src="images/physics/AB.png" alt="Amrit Basnet" title="Amrit Basnet">
+                                <div class="faculty-name">Amrit Basnet</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Sanat Kumar Giri', 'Physics Department', 'Faculty Member', 'images/physics/SKG.png')">
+                                <img src="images/physics/SKG.png" alt="Sanat Kumar Giri" title="Sanat Kumar Giri">
+                                <div class="faculty-name">Sanat Kumar Giri</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Harish Bohara', 'Physics Department', 'Lab Incharge', 'images/physics/HB.png')">
+                                <img src="images/physics/HB.png" alt="Harish Bohara" title="Harish Bohara">
+                                <div class="faculty-name">Harish Bohara</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Samrat Joshi', 'Physics Department', 'Lab Incharge', 'images/physics/SJ.png')">
+                                <img src="images/physics/SJ.png" alt="Samrat Joshi" title="Samrat Joshi">
+                                <div class="faculty-name">Samrat Joshi</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="science-department-card">
+                        <h4>Chemistry Department</h4>
+                        <p><strong>Head:</strong> Mr. Jaya Ram Ghimire</p>
+                        <p><strong>Faculty:</strong> 12 members</p>
+                        <p>Focusing on organic chemistry, inorganic chemistry, and analytical chemistry with practical laboratory sessions.</p>
+                        <p><strong>Faculty Members:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Jaya Ram Ghimire', 'Chemistry Department', 'Head of Department', 'images/chemistry/JRG.png')">
+                                <img src="images/chemistry/JRG.png" alt="Jaya Ram Ghimire" title="Jaya Ram Ghimire">
+                                <div class="faculty-name">Jaya Ram Ghimire</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Devendra Dhakal', 'Chemistry Department', 'Faculty Member', 'images/chemistry/DD.png')">
+                                <img src="images/chemistry/DD.png" alt="Devendra Dhakal" title="Devendra Dhakal">
+                                <div class="faculty-name">Devendra Dhakal</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Dinesh K.C.', 'Chemistry Department', 'Faculty Member', 'images/chemistry/DKC.png')">
+                                <img src="images/chemistry/DKC.png" alt="Dinesh K.C." title="Dinesh K.C.">
+                                <div class="faculty-name">Dinesh K.C.</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Raju Kandel', 'Chemistry Department', 'Faculty Member', 'images/chemistry/RK.png')">
+                                <img src="images/chemistry/RK.png" alt="Raju Kandel" title="Raju Kandel">
+                                <div class="faculty-name">Raju Kandel</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Pushpa Raj Bhatta', 'Chemistry Department', 'Faculty Member', 'images/chemistry/PRB.png')">
+                                <img src="images/chemistry/PRB.png" alt="Pushpa Raj Bhatta" title="Pushpa Raj Bhatta">
+                                <div class="faculty-name">Pushpa Raj Bhatta</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Raju Bhujel', 'Chemistry Department', 'Lab Incharge', 'images/chemistry/RB.png')">
+                                <img src="images/chemistry/RB.png" alt="Raju Bhujel" title="Raju Bhujel">
+                                <div class="faculty-name">Raju Bhujel</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Raju Koirala', 'Chemistry Department', 'Faculty Member', 'images/chemistry/RKT.png')">
+                                <img src="images/chemistry/RKT.png" alt="Raju Koirala" title="Raju Koirala">
+                                <div class="faculty-name">Raju Koirala</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Rita Upreti', 'Chemistry Department', 'Faculty Member', 'images/chemistry/RU.png')">
+                                <img src="images/chemistry/RU.png" alt="Rita Upreti" title="Rita Upreti">
+                                <div class="faculty-name">Rita Upreti</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Dhurba Raut', 'Chemistry Department', 'Faculty Member', 'images/chemistry/DR.png')">
+                                <img src="images/chemistry/DR.png" alt="Dhurba Raut" title="Dhurba Raut">
+                                <div class="faculty-name">Dhurba Raut</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Prakash Tiwari', 'Chemistry Department', 'Faculty Member', 'images/chemistry/PT.png')">
+                                <img src="images/chemistry/PT.png" alt="Prakash Tiwari" title="Prakash Tiwari">
+                                <div class="faculty-name">Prakash Tiwari</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Dinesh Subedi', 'Chemistry Department', 'Faculty Member', 'images/chemistry/DS.png')">
+                                <img src="images/chemistry/DS.png" alt="Dinesh Subedi" title="Dinesh Subedi">
+                                <div class="faculty-name">Dinesh Subedi</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Mahesh Singh Karki', 'Chemistry Department', 'Lab Incharge', 'images/chemistry/MSK.png')">
+                                <img src="images/chemistry/MSK.png" alt="Mahesh Singh Karki" title="Mahesh Singh Karki">
+                                <div class="faculty-name">Mahesh Singh Karki</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="science-department-grid">
+                    <div class="science-department-card">
+                        <h4>Biology Department</h4>
+                        <p><strong>Head:</strong> Mr. Tara Bahadur Gurung</p>
+                        <p><strong>Faculty:</strong> 10 members</p>
+                        <p>Covering cell biology, genetics, ecology, and human physiology with hands-on laboratory experiences.</p>
+                        <p><strong>Faculty Members:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Tara Bahadur Gurung', 'Biology Department', 'Head of Department', 'images/BIO/Tara-Gurung.png')">
+                                <img src="images/BIO/Tara-Gurung.png" alt="Tara Bahadur Gurung" title="Tara Bahadur Gurung">
+                                <div class="faculty-name">Tara Bahadur Gurung</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Keshav Prasain', 'Biology Department', 'Faculty Member', 'images/BIO/kp.png')">
+                                <img src="images/BIO/kp.png" alt="Keshav Prasain" title="Keshav Prasain">
+                                <div class="faculty-name">Keshav Prasain</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Lok Hari Pandey', 'Biology Department', 'Faculty Member', 'images/BIO/LHP.png')">
+                                <img src="images/BIO/LHP.png" alt="Lok Hari Pandey" title="Lok Hari Pandey">
+                                <div class="faculty-name">Lok Hari Pandey</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Sunita Thapa', 'Biology Department', 'Faculty Member', 'images/BIO/ST.png')">
+                                <img src="images/BIO/ST.png" alt="Sunita Thapa" title="Sunita Thapa">
+                                <div class="faculty-name">Sunita Thapa</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Deepak Nepal', 'Biology Department', 'Faculty Member', 'images/BIO/DN.png')">
+                                <img src="images/BIO/DN.png" alt="Deepak Nepal" title="Deepak Nepal">
+                                <div class="faculty-name">Deepak Nepal</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Puskal Khanal', 'Biology Department', 'Faculty Member', 'images/BIO/PK.png')">
+                                <img src="images/BIO/PK.png" alt="Puskal Khanal" title="Puskal Khanal">
+                                <div class="faculty-name">Puskal Khanal</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Sunny Maharjan', 'Biology Department', 'Faculty Member', 'images/BIO/SM.png')">
+                                <img src="images/BIO/SM.png" alt="Sunny Maharjan" title="Sunny Maharjan">
+                                <div class="faculty-name">Sunny Maharjan</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Amber Bahadur Thapa', 'Biology Department', 'Faculty Member', 'images/BIO/ABT.png')">
+                                <img src="images/BIO/ABT.png" alt="Amber Bahadur Thapa" title="Amber Bahadur Thapa">
+                                <div class="faculty-name">Amber Bahadur Thapa</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Sulav Giri', 'Biology Department', 'Lab Incharge', 'images/BIO/SG.png')">
+                                <img src="images/BIO/SG.png" alt="Sulav Giri" title="Sulav Giri">
+                                <div class="faculty-name">Sulav Giri</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Prakash Giri', 'Biology Department', 'Lab Incharge', 'images/BIO/PG.png')">
+                                <img src="images/BIO/PG.png" alt="Prakash Giri" title="Prakash Giri">
+                                <div class="faculty-name">Prakash Giri</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="science-department-card">
+                        <h4>Mathematics Department</h4>
+                        <p><strong>Head:</strong> Mr. Agni Datta Joshi</p>
+                        <p><strong>Faculty:</strong> 10 members</p>
+                        <p>Teaching calculus, algebra, geometry, and statistics with emphasis on problem-solving skills.</p>
+                        <p><strong>Faculty Members:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Agni Datta Joshi', 'Mathematics Department', 'Head of Department', 'images/math/Agni-Joshi.png')">
+                                <img src="images/math/Agni-Joshi.png" alt="Agni Datta Joshi" title="Agni Datta Joshi">
+                                <div class="faculty-name">Agni Datta Joshi</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Bal Krishna Bhatta', 'Mathematics Department', 'Faculty Member', 'images/math/BKB.png')">
+                                <img src="images/math/BKB.png" alt="Bal Krishna Bhatta" title="Bal Krishna Bhatta">
+                                <div class="faculty-name">Bal Krishna Bhatta</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Bhavanand Chaudhary', 'Mathematics Department', 'Faculty Member', 'images/math/BC.png')">
+                                <img src="images/math/BC.png" alt="Bhavanand Chaudhary" title="Bhavanand Chaudhary">
+                                <div class="faculty-name">Bhavanand Chaudhary</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Chiranjibi Gyawali', 'Mathematics Department', 'Faculty Member', 'images/math/CG.png')">
+                                <img src="images/math/CG.png" alt="Chiranjibi Gyawali" title="Chiranjibi Gyawali">
+                                <div class="faculty-name">Chiranjibi Gyawali</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Laxman Adhikari', 'Mathematics Department', 'Faculty Member', 'images/math/LA.png')">
+                                <img src="images/math/LA.png" alt="Laxman Adhikari" title="Laxman Adhikari">
+                                <div class="faculty-name">Laxman Adhikari</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Rajendra Bhattarai', 'Mathematics Department', 'Faculty Member', 'images/math/RB.png')">
+                                <img src="images/math/RB.png" alt="Rajendra Bhattarai" title="Rajendra Bhattarai">
+                                <div class="faculty-name">Rajendra Bhattarai</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Rana Bahadur Giri', 'Mathematics Department', 'Faculty Member', 'images/math/RBG.png')">
+                                <img src="images/math/RBG.png" alt="Rana Bahadur Giri" title="Rana Bahadur Giri">
+                                <div class="faculty-name">Rana Bahadur Giri</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Baburam Panta', 'Mathematics Department', 'Faculty Member', 'images/math/BRP.png')">
+                                <img src="images/math/BRP.png" alt="Baburam Panta" title="Baburam Panta">
+                                <div class="faculty-name">Baburam Panta</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Narayan Dhakal', 'Mathematics Department', 'Faculty Member', 'images/math/ND.png')">
+                                <img src="images/math/ND.png" alt="Narayan Dhakal" title="Narayan Dhakal">
+                                <div class="faculty-name">Narayan Dhakal</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Surendra Shrestha', 'Mathematics Department', 'Faculty Member', 'images/math/SS.png')">
+                                <img src="images/math/SS.png" alt="Surendra Shrestha" title="Surendra Shrestha">
+                                <div class="faculty-name">Surendra Shrestha</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Language Departments</h3>
+                <div class="department-grid">
+                    <div class="department-card">
+                        <h4>English Department</h4>
+                        <p><strong>Faculty:</strong> 4 members</p>
+                        <p>Teaching English language, literature, and communication skills with focus on academic writing and presentation.</p>
+                        <p><strong>Faculty Members:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Ganesh Raj Pandey', 'English Department', 'Faculty Member', 'images/english/Ganesh-Raj-Pandey.png')">
+                                <img src="images/english/Ganesh-Raj-Pandey.png" alt="Ganesh Raj Pandey" title="Ganesh Raj Pandey">
+                                <div class="faculty-name">Ganesh Raj Pandey</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Tika Datta Subedi', 'English Department', 'Faculty Member', 'images/english/TS.png')">
+                                <img src="images/english/TS.png" alt="Tika Datta Subedi" title="Tika Datta Subedi">
+                                <div class="faculty-name">Tika Datta Subedi</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Dr. Anju Gupta', 'English Department', 'Faculty Member', 'images/english/DG.png')">
+                                <img src="images/english/DG.png" alt="Dr. Anju Gupta" title="Dr. Anju Gupta">
+                                <div class="faculty-name">Dr. Anju Gupta</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Krishna Pokhrel', 'English Department', 'Faculty Member', 'images/english/KP.png')">
+                                <img src="images/english/KP.png" alt="Krishna Pokhrel" title="Krishna Pokhrel">
+                                <div class="faculty-name">Krishna Pokhrel</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="department-card">
+                        <h4>Nepali Department</h4>
+                        <p><strong>Faculty:</strong> 5 members</p>
+                        <p>Teaching Nepali language, literature, and cultural studies with emphasis on traditional and modern Nepali literature.</p>
+                        <p><strong>Faculty Members:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Chudamani Pandey', 'Nepali Department', 'Faculty Member', 'images/NEPALI/CP.png')">
+                                <img src="images/NEPALI/CP.png" alt="Chudamani Pandey" title="Chudamani Pandey">
+                                <div class="faculty-name">Chudamani Pandey</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Diwas Mani Bhattarai', 'Nepali Department', 'Faculty Member', 'images/NEPALI/DMB.png')">
+                                <img src="images/NEPALI/DMB.png" alt="Diwas Mani Bhattarai" title="Diwas Mani Bhattarai">
+                                <div class="faculty-name">Diwas Mani Bhattarai</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Jivan Shrestha', 'Nepali Department', 'Faculty Member', 'images/NEPALI/JS.png')">
+                                <img src="images/NEPALI/JS.png" alt="Jivan Shrestha" title="Jivan Shrestha">
+                                <div class="faculty-name">Jivan Shrestha</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Yadav Prasad Bhandari', 'Nepali Department', 'Faculty Member', 'images/NEPALI/YB.png')">
+                                <img src="images/NEPALI/YB.png" alt="Yadav Prasad Bhandari" title="Yadav Prasad Bhandari">
+                                <div class="faculty-name">Yadav Prasad Bhandari</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Mukti Prasad Bhandari', 'Nepali Department', 'Faculty Member', 'images/NEPALI/MPB.png')">
+                                <img src="images/NEPALI/MPB.png" alt="Mukti Prasad Bhandari" title="Mukti Prasad Bhandari">
+                                <div class="faculty-name">Mukti Prasad Bhandari</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Computer Science Department</h3>
+                <div class="department-grid">
+                    <div class="department-card">
+                        <h4>Computer Science</h4>
+                        <p><strong>Head:</strong> Mr. Navin Gurung</p>
+                        <p><strong>Faculty:</strong> 4 members</p>
+                        <p>Teaching programming, software development, and computer applications with hands-on practical training.</p>
+                        <p><strong>Faculty Members:</strong></p>
+                        <div class="faculty-images">
+                            <div class="faculty-member" onclick="openModal('Navin Gurung', 'Computer Science Department', 'Head of Department', 'images/COMPUTER/Navin-Gurung.png')">
+                                <img src="images/COMPUTER/Navin-Gurung.png" alt="Navin Gurung" title="Navin Gurung">
+                                <div class="faculty-name">Navin Gurung</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Tek Raj Joshi', 'Computer Science Department', 'Faculty Member', 'images/COMPUTER/TKJ.png')">
+                                <img src="images/COMPUTER/TKJ.png" alt="Tek Raj Joshi" title="Tek Raj Joshi">
+                                <div class="faculty-name">Tek Raj Joshi</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Kamal Tamrakar', 'Computer Science Department', 'Faculty Member', 'images/COMPUTER/KT.png')">
+                                <img src="images/COMPUTER/KT.png" alt="Kamal Tamrakar" title="Kamal Tamrakar">
+                                <div class="faculty-name">Kamal Tamrakar</div>
+                            </div>
+                            <div class="faculty-member" onclick="openModal('Manoj Kumar Giri', 'Computer Science Department', 'Faculty Member', 'images/COMPUTER/MKG.png')">
+                                <img src="images/COMPUTER/MKG.png" alt="Manoj Kumar Giri" title="Manoj Kumar Giri">
+                                <div class="faculty-name">Manoj Kumar Giri</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Management Department</h3>
+                <div class="department-grid">
+                    <div class="department-card">
+                        <h4>Business Studies</h4>
+                        <p><strong>Head:</strong> Mr. Narayan Pokharel</p>
+                        <p><strong>Faculty:</strong> 2 members</p>
+                        <p>Teaching business management, entrepreneurship, and organizational behavior with case study approaches.</p>
+                        <p><strong>Faculty Members:</strong> Mr. Kuldeep Aryal</p>
+                    </div>
+                    <div class="department-card">
+                        <h4>Economics Department</h4>
+                        <p><strong>Head:</strong> Mr. Yadab Gautam</p>
+                        <p><strong>Faculty:</strong> 6 members</p>
+                        <p>Covering microeconomics, macroeconomics, and economic development with real-world applications.</p>
+                        <p><strong>Faculty Members:</strong> Mr. Bal Krishna Lamsal, Ms. Jamuna Shrestha, Mr. Nirmal Ghimire, Mr. Yatish Acharya, Mr. Damodar Rijal</p>
+                    </div>
+                    <div class="department-card">
+                        <h4>Accounting Department</h4>
+                        <p><strong>Head:</strong> Mr. Khagendra Dhakal</p>
+                        <p><strong>Faculty:</strong> 6 members</p>
+                        <p>Teaching financial accounting, cost accounting, and auditing with practical accounting software training.</p>
+                        <p><strong>Faculty Members:</strong> Mr. Bhumi Sitaula, Mr. Babulal Ghimire, Mr. Narayan Ghimire, Mr. Sagar Shrestha, Dr. Nirajan Rijal</p>
+                    </div>
+                    <div class="department-card">
+                        <h4>Hotel Management & TMS</h4>
+                        <p><strong>Head:</strong> Mr. Bir Bahadur Chhetri</p>
+                        <p><strong>Faculty:</strong> 2 members</p>
+                        <p>Teaching tourism and mountaineering studies with practical training in hospitality management.</p>
+                        <p><strong>Faculty Members:</strong> Mr. Sanjay Parajuli</p>
+                    </div>
+                </div>
+
+                <h3>Law Department</h3>
+                <div class="department-grid">
+                    <div class="department-card">
+                        <h4>Faculty of Law</h4>
+                        <p><strong>Faculty:</strong> 5 members</p>
+                        <p>Teaching constitutional principles, fundamental rights, and legal procedures with moot court sessions.</p>
+                        <p><strong>Faculty Members:</strong> Ms. Jasmin Karmacharya, Mr. Baburaja Shakya, Dr. Archana Nepal Shivakoti, Mr. Ghanshyam Silwal, Ms. Rajeshwori Maharjan</p>
+                    </div>
+                    <div class="department-card">
+                        <h4>Social Studies and Life Skill</h4>
+                        <p><strong>Head:</strong> Dr. Chudamani Pandey</p>
+                        <p><strong>Faculty:</strong> 5 members</p>
+                        <p>Covering social studies and life skills with practical applications.</p>
+                        <p><strong>Faculty Members:</strong> Mr. Deependra Chaulagain, Mr. Khagendra Bahadur Bist, Mr. Laxman Prasad Marasini, Mr. Shalik Subedi</p>
+                    </div>
+                </div>
+            </div>
+
+           
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/OIP.webp" alt="Uniglobe Logo" class="footer-logo-img">
+                        <h3>Uniglobe SS/College</h3>
+                    </div>
+                    <p>Empowering minds, shaping futures, and bringing the best together.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="qfas.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Kamaladi, Ganeshthan Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> 01-5321875, 01-5320722, 01-5351409</p>
+                    <p><i class="fas fa-envelope"></i> info@uniglobecollege.edu.np</p>
+                    <p><i class="fas fa-mobile"></i> Mobile: 9851311179</p>
+                </div>
+                <div class="footer-section">
+                    <h4>MIS Portal</h4>
+                    <p>Access our Management Information System for students, parents, teachers, and administrators.</p>
+                    <a href="mis.html" class="btn btn-primary">Login to MIS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uniglobe SS/College. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Faculty Details -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img src="" alt="Faculty Image" class="modal-image" id="modalImage">
+            <div class="modal-name" id="modalName"></div>
+            <div class="modal-department" id="modalDepartment"></div>
+            <div class="modal-role" id="modalRole"></div>
+        </div>
+    </div>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chat-bubble">
+        <div class="bubble-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <span class="bubble-text">UGSS Sewa Sathi</span>
+    </div>
+
+    <!-- Chat Interface (Hidden by default) -->
+    <div class="chat-interface" id="chat-interface">
+        <div class="chat-header">
+            <h3>UGSS Sewa Sathi</h3>
+            <p>Ask me anything about Uniglobe College</p>
+            <button class="chat-close" id="chat-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <p>Namaste! 🙏 I'm your UGSS Sewa Sathi. How can I help you today? 🚀</p>
+                <p style="font-size: 11px; opacity: 0.7; margin-top: 5px;">✨ Deployed by UGSS_elite ✨<br>🤖 Powered by Gemini 2.0 Flash 🤖<br>🎉 Part of Hackathon Event 🎉<br>🔧 Still in Beta Deployment Phase 🔧</p>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message and press Enter..." />
+        </div>
+    </div>
+
+    <script src="homepage.js"></script>
+    <script src="chat.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Modal functionality
+        function openModal(name, department, role, imageSrc) {
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalDepartment').textContent = department;
+            document.getElementById('modalRole').textContent = role;
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalImage').alt = name;
+            document.getElementById('myModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+        
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html> 

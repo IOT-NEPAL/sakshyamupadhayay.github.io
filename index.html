@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniglobe SS/College - Home</title>
+    <!-- ugss hackathon -->
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Team Section Animations */
+        .section-title {
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 5px rgba(102, 126, 234, 0.3); }
+            100% { text-shadow: 0 0 20px rgba(102, 126, 234, 0.6); }
+        }
+        
+        .team-member {
+            animation: cardFloat 0.6s ease-out;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        @keyframes cardFloat {
+            0% { 
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .member-image {
+            height: 300px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .member-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Enhanced team member styling */
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .member-info {
+            padding: 25px;
+        }
+        
+        .member-info h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .member-role {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .member-description {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <!-- owner UNI-ElITE -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <!-- owner UNI-ElITE -->
+                <img src="images/OIP.webp" alt="Uniglobe Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Uniglobe SS/College</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourteam.html" class="nav-link">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="qfas.html" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="mis.html" class="nav-link btn-mis">MIS Portal</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- ugss hackathon -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <video autoplay muted loop>
+                <source src="images/ugss.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <!-- ugss hackathon -->
+            <div class="hero-text">
+                <h1 class="hero-title">Welcome to Uniglobe SS/College</h1>
+                <p class="hero-subtitle">Empowering minds, shaping futures, and bringing <span style="color: #4CAF50;">the best together</span></p>
+                <div class="hero-buttons">
+                    <a href="aboutus.html" class="btn btn-primary">Learn More</a>
+                    <a href="mis.html" class="btn btn-secondary">Access MIS</a>
+                    <a href="hackathon.html" class="btn btn-primary" style="background: #4CAF50; color: white;">🚀 Hackathon 1.0 2025</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <!-- owner UNI-ElITE -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Uniglobe SS/College</h2>
+                <p class="section-subtitle">Discover our story and commitment to excellence</p>
+            </div>
+            <div class="about-content">
+                <!-- owner UNI-ElITE -->
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Uniglobe SS/College is a premier educational institution dedicated to providing quality education and fostering academic excellence. Founded with a vision to create global leaders, we have been at the forefront of educational innovation for over a decade.</p>
+                    
+                    <h3>Mission & Vision</h3>
+                    <div class="mission-vision">
+                        <div class="mission">
+                            <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+                            <p>To provide comprehensive, innovative, and accessible education that empowers students to become responsible global citizens and leaders in their chosen fields.</p>
+                        </div>
+                        <div class="vision">
+                            <h4><i class="fas fa-eye"></i> Our Vision</h4>
+                            <p>To be a leading educational institution recognized for academic excellence, innovation, and commitment to developing well-rounded individuals who contribute positively to society.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">4000+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">60+</div>
+                        <div class="stat-label">Faculty Staff</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <!-- ugss hackathon -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Leadership Team</h2>
+                <p class="section-subtitle">Meet the dedicated professionals guiding our institution</p>
+            </div>
+            <div class="team-grid">
+                <!-- ugss hackathon -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/adminstration team/Ganesh-Sir.png" alt="Dr. Ganesh Regmi" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Ganesh Regmi</h3>
+                        <p class="member-role">Principal</p>
+                        <p class="member-description">Leading our institution with over 15 years of educational leadership experience.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/adminstration team/ramesh datta panday.png" alt="CA. Ramesh Datt Pandey" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="member-info">
+                        <h3>CA. Ramesh Datt Pandey</h3>
+                        <p class="member-role">CFO (Group)</p>
+                        <p class="member-description">Overseeing financial excellence and institutional development programs.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/adminstration team/Dill-Ram-Sir.png" alt="Mr. Dilli Ram Upreti" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mr. Dilli Ram Upreti</h3>
+                        <p class="member-role">Program Director, Science Stream</p>
+                        <p class="member-description">Managing institutional operations and administrative excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <!-- ugss hackathon -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: #4CAF50;">Upcoming Events</h2>
+                <p class="section-subtitle">Stay connected with our latest activities and programs</p>
+            </div>
+            <div class="events-grid">
+                <!-- owner UNI-ElITE -->
+                <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-image">
+                        <img src="images/images/sports club.jpg" alt="Sports Event" class="event-img">
+                        <div class="event-overlay">
+                            <div class="event-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Dec</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Annual Sports Meet</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> College Ground</p>
+                        <p class="event-description">Join us for our annual sports competition featuring various athletic events and team sports.</p>
+                        <div class="event-badge">Sports Club</div>
+                    </div>
+                </div>
+                <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-image">
+                        <img src="images/images/science club.jpg" alt="Science Event" class="event-img">
+                        <div class="event-overlay">
+                            <div class="event-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-date">
+                        <span class="day">20</span>
+                        <span class="month">Dec</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Science Exhibition</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Science Block</p>
+                        <p class="event-description">Showcasing innovative projects and scientific discoveries by our talented students.</p>
+                        <div class="event-badge">Science Club</div>
+                    </div>
+                </div>
+                <div class="event-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-image">
+                        <img src="images/images/theater club.jpg" alt="Cultural Event" class="event-img">
+                        <div class="event-overlay">
+                            <div class="event-icon">
+                                <i class="fas fa-theater-masks"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-date">
+                        <span class="day">25</span>
+                        <span class="month">Dec</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Cultural Festival</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 6:00 PM - 10:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Auditorium</p>
+                        <p class="event-description">Celebrating diversity through music, dance, drama, and cultural performances.</p>
+                        <div class="event-badge">Theater Club</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <!-- owner UNI-ElITE -->
+    <section id="faqs" class="faqs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: #FFC107;">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our institution</p>
+            </div>
+            <div class="faq-container">
+                <!-- ugss hackathon -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the admission requirements?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Admission requirements include completed application forms, academic transcripts, and entrance examination results. Please contact our admissions office for specific details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What programs do you offer?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a wide range of programs including Science, Arts, Commerce, and specialized courses in technology and management. Each program is designed to meet industry standards.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I access the MIS portal?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can access the MIS portal by clicking the "MIS Portal" button in the navigation menu. Different user types (Admin, Teacher, Student, Parent) have separate login credentials.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What facilities are available on campus?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our campus features modern classrooms, well-equipped laboratories, a library, sports facilities, computer labs, and a cafeteria. We also provide Wi-Fi connectivity throughout the campus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- ugss hackathon -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- owner UNI-ElITE -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/OIP.webp" alt="Uniglobe Logo" class="footer-logo-img">
+                        <h3>Uniglobe SS/College</h3>
+                    </div>
+                    <p>Empowering minds, shaping futures, and bringing <span style="color: #4CAF50;">the best together</span>.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="qfas.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Kamaladi, Ganeshthan Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> 01-5321875, 01-5320722, 01-5351409</p>
+                    <p><i class="fas fa-envelope"></i> info@uniglobecollege.edu.np</p>
+                    <p><i class="fas fa-mobile"></i> Mobile: 9851311179</p>
+                </div>
+                <div class="footer-section">
+                    <h4>MIS Portal</h4>
+                    <p>Access our Management Information System for students, parents, teachers, and administrators.</p>
+                    <a href="mis.html" class="btn btn-primary">Login to MIS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uniglobe SS/College. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chat-bubble">
+        <div class="bubble-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <span class="bubble-text">UGSS Sewa Sathi</span>
+    </div>
+
+    <!-- Chat Interface (Hidden by default) -->
+    <div class="chat-interface" id="chat-interface">
+        <div class="chat-header">
+            <h3>UGSS Sewa Sathi</h3>
+            <p>Ask me anything about Uniglobe College</p>
+            <button class="chat-close" id="chat-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <p>Namaste! 🙏 I'm your UGSS Sewa Sathi. How can I help you today? 🚀</p>
+                <p style="font-size: 11px; opacity: 0.7; margin-top: 5px;">✨ Deployed by UGSS_elite ✨<br>🤖 Powered by Gemini 2.0 Flash 🤖<br>🎉 Part of Hackathon Event 🎉<br>🔧 Still in Beta Deployment Phase 🔧</p>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message and press Enter..." />
+        </div>
+    </div>
+
+    <script src="homepage.js"></script>
+    <script src="chat.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        
+        // Add custom event animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventCards = document.querySelectorAll('.event-card');
+            
+            // Add staggered animation for event cards
+            eventCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+                
+                // Add hover effects
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                    this.style.boxShadow = '0 25px 60px rgba(0, 0, 0, 0.2)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

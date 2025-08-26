@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Test - HOD Functionality</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .test-header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .test-queries {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .test-queries h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .query-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .query-list li {
+            background: white;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .query-list li:hover {
+            background: #e3f2fd;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 20px;
+            background: #e8f5e8;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .status.success {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        
+        .status.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🤖 Chatbot HOD Test</h1>
+            <p>Testing the enhanced faculty database functionality</p>
+        </div>
+        
+        <div class="status success">
+            <h3>✅ Ready to Test</h3>
+            <p>Click any query below to test the chatbot's HOD functionality</p>
+        </div>
+        
+        <div class="test-queries">
+            <h3>🧪 Test Queries for HOD Functionality</h3>
+            <ul class="query-list">
+                <li onclick="testQuery('Who is HOD of this faculty?')">"Who is HOD of this faculty?"</li>
+                <li onclick="testQuery('Show me all department heads')">"Show me all department heads"</li>
+                <li onclick="testQuery('Who is head of physics department?')">"Who is head of physics department?"</li>
+                <li onclick="testQuery('HOD of chemistry')">"HOD of chemistry"</li>
+                <li onclick="testQuery('Biology department head')">"Biology department head"</li>
+                <li onclick="testQuery('Who is Devendra Khadka?')">"Who is Devendra Khadka?"</li>
+                <li onclick="testQuery('Show me physics department faculty')">"Show me physics department faculty"</li>
+                <li onclick="testQuery('List all faculty members')">"List all faculty members"</li>
+            </ul>
+        </div>
+        
+        <div class="test-queries">
+            <h3>📋 Expected Results</h3>
+            <ul>
+                <li><strong>HOD queries:</strong> Should show all department heads with their details and compliments</li>
+                <li><strong>Department-specific HOD:</strong> Should show the specific department head</li>
+                <li><strong>Faculty search:</strong> Should show individual faculty information</li>
+                <li><strong>Department faculty:</strong> Should show all faculty in that department</li>
+                <li><strong>Complete list:</strong> Should show all faculty organized by department</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        function testQuery(query) {
+            // Simulate clicking the chat bubble
+            const chatBubble = document.getElementById('chat-bubble');
+            if (chatBubble) {
+                chatBubble.click();
+                
+                // Wait a moment for chat to open, then simulate typing
+                setTimeout(() => {
+                    const chatInput = document.getElementById('chat-input');
+                    if (chatInput) {
+                        chatInput.value = query;
+                        chatInput.dispatchEvent(new KeyboardEvent('keypress', { key: 'Enter' }));
+                    }
+                }, 500);
+            } else {
+                alert('Chatbot not loaded. Please refresh the page.');
+            }
+        }
+    </script>
+    
+    <!-- Load the enhanced chatbot -->
+    <script src="chatbot-loader.js"></script>
+</body>
+</html> 
