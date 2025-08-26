@@ -493,6 +493,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Tek Raj Joshi": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Exceptional computer educater new faculty staff well understanding!" },
             "Kamal Tamrakar": { post: "Faculty Member", department: "Computer Science Department", compliment: "💻 Outstanding computer teacher who makes coding exciting!" },
             "Manoj Kumar Giri": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Dedicated computer instructor with excellent technical skills!" }
+            // students 
+            "Smarika Poudel": { post: "grade 12 student", department: "Biology Science ", compliment: "Shes also called Nakkali didi because she makes a lot of tiktok, i wish i could flirt her but shes my vauju and didi of My developer" },
         }
     };
     
