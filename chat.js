@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hackathon: {
                 name: "UGSS Hackathon 1.0 2025",
                 status: "First Ever Event",
-                description: "The FIRST EVER hackathon organized by the college and IT Club! Students showcase innovative projects and problem-solving skills in this groundbreaking event This site secured first position.",
+                description: "The FIRST EVER hackathon organized by the college and IT Club! Students showcase innovative projects and problem-solving skills in this groundbreaking event.",
                 features: ["Coding Challenges", "Innovation Hub", "Prizes & Recognition"]
             }
         },
@@ -400,14 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: "01-5321875, 01-5320722, 01-5351409",
             email: "info@uniglobecollege.edu.np",
             mobile: "9851311179"
-        }, 
-         // student Information
-        Student: {  
-             "smarika Poudel": { Grade: "12", program: "Science biology ", compliment: "shes called by the name Nakkali a sweet charming tiktoker ah i wish i would be in her tiktok " },
-            
-            
         },
-        
         
         // Complete Faculty and Staff Information
         faculty: {
@@ -499,8 +492,18 @@ document.addEventListener('DOMContentLoaded', function() {
             "Navin Gurung": { post: "Head of Department", department: "Computer Science Department", compliment: "💻 Brilliant computer science head who leads digital innovation!as well as a Singer!!" },
             "Tek Raj Joshi": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Exceptional computer educater new faculty staff well understanding!" },
             "Kamal Tamrakar": { post: "Faculty Member", department: "Computer Science Department", compliment: "💻 Outstanding computer teacher who makes coding exciting!" },
-            "Manoj Kumar Giri": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Dedicated computer instructor with excellent technical skills!" },
+            "Manoj Kumar Giri": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Dedicated computer instructor with excellent technical skills!" }
         },
+
+        // Student Directory
+        students: {
+            "Smarika Paudel": { grade: "12", stream: "Science", faculty: "Biology", compliment: "she is nakkali, I wish I could make TikTok with her khub lope parya xa" },
+            "Sumit Sitaula": { grade: "12", stream: "Science", faculty: "Biology", compliment: "he is fit but people call him fat; I wish I could be like him — strong and bold motey bhaisey" },
+            "Prapti Devkota": { grade: "12", stream: "Science", faculty: "Biology", compliment: "khub love pareko xa. Namaste Aama — she played the role of Ama in drama" },
+            "Aava": { grade: "12", stream: "Science", faculty: "Biology", compliment: "she is the best" },
+            "Aakrit Shrestha": { grade: "12", stream: "Science", faculty: "Computer", compliment: "i wished he kept his mouth shut damn hes gonna be public speaker" },
+            "Binita Shah": { grade: "12", stream: "Science", faculty: "Biology", compliment: "silent but very violent" }
+        }
     };
     
     // Call Gemini API with comprehensive UGSS data
@@ -552,6 +555,11 @@ ${Object.entries(ugssData.faculty).map(([name, info]) =>
     `- ${name}: ${info.post} (${info.department}) - ${info.compliment}`
 ).join('\n')}
 
+STUDENT DIRECTORY:
+${Object.entries(ugssData.students).map(([name, info]) => 
+    `- ${name}: Grade ${info.grade}, ${info.stream} (${info.faculty}) - ${info.compliment}`
+).join('\n')}
+
 DEPARTMENT HEADS (HODs):
 - Physics Department HOD: Devendra Khadka
 - Chemistry Department HOD: Jaya Ram Ghimire  
@@ -569,14 +577,15 @@ INSTRUCTIONS:
 2. Use the provided UGSS data to answer questions accurately
 3. You can search the web for additional information when needed
 4. For questions about specific staff members, use the faculty data provided
-5. For questions about HODs, use the department heads information
-6. Use emojis and friendly language - NEVER use asterisks (**) for formatting
-7. If asked about topics not related to Uniglobe College, you can provide general information or redirect to college-related topics
-8. Always maintain a helpful and professional tone
-9. If someone asks "who created you", "who made you", "who built you", "who developed you", "who programmed you", or "who designed you", always respond with: "I was made by my genious coder Sakshyam Upadhayay who studies in this college grade12L as a part of UGSS Hackathon Event as being a member of team elite 🚀✨"
-10. Keep responses SHORT and SWEET - maximum 150 words
-11. Use emojis instead of asterisks for emphasis: 🎓 for education, 🏫 for college, 📚 for programs, 🎭 for clubs, 📅 for events, 📞 for contact, 🗺️ for location, etc.
-12. Make responses conversational and engaging, not formal or robotic
+5. For questions about students, use the student directory provided
+6. For questions about HODs, use the department heads information
+7. Use emojis and friendly language - NEVER use asterisks (**) for formatting
+8. If asked about topics not related to Uniglobe College, you can provide general information or redirect to college-related topics
+9. Always maintain a helpful and professional tone
+10. If someone asks "who created you", "who made you", "who built you", "who developed you", "who programmed you", or "who designed you", always respond with: "I was made by my genious coder Sakshyam Upadhayay who studies in this college grade12L as a part of UGSS Hackathon Event as being a member of team elite 🚀✨"
+11. Keep responses SHORT and SWEET - maximum 150 words
+12. Use emojis instead of asterisks for emphasis: 🎓 for education, 🏫 for college, 📚 for programs, 🎭 for clubs, 📅 for events, 📞 for contact, 🗺️ for location, etc.
+13. Make responses conversational and engaging, not formal or robotic
 `;
 
         const requestBody = {
