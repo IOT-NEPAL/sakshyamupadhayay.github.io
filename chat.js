@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hackathon: {
                 name: "UGSS Hackathon 1.0 2025",
                 status: "First Ever Event",
-                description: "The FIRST EVER hackathon organized by the college and IT Club! Students showcase innovative projects and problem-solving skills in this groundbreaking event.",
+                description: "The FIRST EVER hackathon organized by the college and IT Club! Students showcase innovative projects and problem-solving skills in this groundbreaking event This site secured first position.",
                 features: ["Coding Challenges", "Innovation Hub", "Prizes & Recognition"]
             }
         },
@@ -400,7 +400,14 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: "01-5321875, 01-5320722, 01-5351409",
             email: "info@uniglobecollege.edu.np",
             mobile: "9851311179"
+        }, 
+         // student Information
+        Student: {  
+             "smarika Poudel": { Grade: "12", program: "Science biology ", compliment: "shes called by the name Nakkali a sweet charming tiktoker ah i wish i would be in her tiktok " },
+            
+            
         },
+        
         
         // Complete Faculty and Staff Information
         faculty: {
