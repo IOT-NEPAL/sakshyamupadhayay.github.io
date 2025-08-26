@@ -492,8 +492,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "Navin Gurung": { post: "Head of Department", department: "Computer Science Department", compliment: "💻 Brilliant computer science head who leads digital innovation!as well as a Singer!!" },
             "Tek Raj Joshi": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Exceptional computer educater new faculty staff well understanding!" },
             "Kamal Tamrakar": { post: "Faculty Member", department: "Computer Science Department", compliment: "💻 Outstanding computer teacher who makes coding exciting!" },
-            "Manoj Kumar Giri": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Dedicated computer instructor with excellent technical skills!" }
-        }
+            "Manoj Kumar Giri": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Dedicated computer instructor with excellent technical skills!" },
+        },
     };
     
     // Call Gemini API with comprehensive UGSS data
