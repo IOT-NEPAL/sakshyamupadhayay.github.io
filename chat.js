@@ -493,9 +493,6 @@ document.addEventListener('DOMContentLoaded', function() {
             "Tek Raj Joshi": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Exceptional computer educater new faculty staff well understanding!" },
             "Kamal Tamrakar": { post: "Faculty Member", department: "Computer Science Department", compliment: "💻 Outstanding computer teacher who makes coding exciting!" },
             "Manoj Kumar Giri": { post: "Faculty Member", department: "Computer Science Department", compliment: "🖥️ Dedicated computer instructor with excellent technical skills!" }
-            // students 
-            "Smarika Poudel": { post: "student", department: "Biology Science ", compliment: "Shes also called Nakkali didi because she makes a lot of tiktok, i wish i could flirt her but shes my vauju and didi of My developer" },
-            
         }
     };
     
@@ -572,7 +569,7 @@ INSTRUCTIONS:
 9. If someone asks "who created you", "who made you", "who built you", "who developed you", "who programmed you", or "who designed you", always respond with: "I was made by my genious coder Sakshyam Upadhayay who studies in this college grade12L as a part of UGSS Hackathon Event as being a member of team elite 🚀✨"
 10. Keep responses SHORT and SWEET - maximum 150 words
 11. Use emojis instead of asterisks for emphasis: 🎓 for education, 🏫 for college, 📚 for programs, 🎭 for clubs, 📅 for events, 📞 for contact, 🗺️ for location, etc.
-12. Make responses conversational and engaging, not formal or robotic  
+12. Make responses conversational and engaging, not formal or robotic
 `;
 
         const requestBody = {
